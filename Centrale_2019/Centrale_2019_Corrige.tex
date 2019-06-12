@@ -140,13 +140,86 @@ L_2 V_s \\
 On a donc $ L_{k} V_s =\begin{pmatrix}  l_0 f_k  & l_1 f_k & l_2 f_k & \ldots & l_{N-1} f_k\end{pmatrix} \begin{pmatrix}
 s[0]  \\ s[T_e] \\ s[2T_e] \\ \vdots \\ s\left[\left(N-1\right)T_e\right] \\   \end{pmatrix} = \sum  \limits_{i=0}^{N-1} l_i f_k s\left[i T_e\right]$.
 
+Ainsi la matrice $M$ est composé de toutes les lignes $L_n$ pour $n\in  \llbracket 0,N_f-1\rrbracket$.
+
+
+
+
+La matrice $M$ aura donc pour forme : 
+
+\begin{align*}
+M=\dfrac{1}{N_f}
+\left(
+\begin{array}{cccc}
+1 & 1 & \ldots & 1 \\ 
+1 & e^{-i2\pi f_1T_e} & \ldots & e^{-i2\pi f_{1}T_e(N-1)} \\ 
+\vdots & e^{-i2\pi f_nT_e} & \ldots & e^{-i2\pi f_{n}T_e(N-1)} \\ 
+1 & e^{-i2\pi f_{N_f-1}T_e} & \ldots & e^{-i2\pi f_{N_f-1}T_e(N-1)} \\ 
+\end{array} 
+\right)
+\end{align*}
+
 
 
 \subparagraph{}
 
-\subparagraph{}
+De la question précédente, on peut exprimer le terme $a_{n,m}$ 
+
+\begin{align*}
+a_{n,m}=\dfrac{1}{N_f}e^{-i2\pi f_{n}T_em}
+\end{align*}
 
 \subparagraph{}
+
+En posant 
+
+\begin{align*}
+X=-i2\pi
+\left(
+\begin{array}{c}
+0\\
+f_1\\
+f_2\\
+\vdots\\
+f_{N_f-1}
+\end{array}
+\right)
+\cdot
+\left(
+\begin{array}{ccccc}
+0& T_e & 2T_e &\ldots & (N-1)T_e
+\end{array}
+\right)
+=-i2\pi E_f\cdot t_k
+\end{align*}
+
+On obtient bien,
+
+\begin{align*}
+M=\dfrac{1}{N_f}exp(X)
+\end{align*}
+
+
+
+
+\subparagraph{}
+
+
+
+\begin{lstlisting}
+import numpy as np
+
+def calculSpectre(Signal,Nf,fmax,Te):
+    Vs=np.transpose([np.array(Signal)])
+    Ef=np.transpose([np.linspace(0,fmax,Nf)])
+    tk=np.array([range(len(Signal))])*Te
+    X=np.dot(Ef,tk)*(-1j*2*np.pi)
+    M=1/Nf*np.exp(X)
+    Sp=np.dot(M,Vs)
+    An=abs(Sp)
+    return An
+
+\end{lstlisting}
 
 \subsection{Cahiers des charges partiel de la chaîne d'asservissement en position du robot esclave}
 
