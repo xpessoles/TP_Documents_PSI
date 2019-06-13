@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.18)  13 JUN 2019 21:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.18)  13 JUN 2019 22:08
 entering extended mode
 **./Centrale_2019_Corrige.tex
 (Centrale_2019_Corrige.tex
@@ -2196,16 +2196,26 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 234.
+
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 237.
+
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 237.
 <png/logo_upsti.png, id=30, 200.75pt x 71.26625pt>
 File: png/logo_upsti.png Graphic file (type png)
 <use png/logo_upsti.png>
-Package pdftex.def Info: png/logo_upsti.png  used on input line 240.
+Package pdftex.def Info: png/logo_upsti.png  used on input line 237.
 (pdftex.def)             Requested size: 56.9055pt x 20.20125pt.
 LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
-(Font)              scaled to size 7.52002pt on input line 240.
+(Font)              scaled to size 7.52002pt on input line 237.
 LaTeX Font Info:    Font shape `T1/pag/m/it' in size <8> not available
-(Font)              Font shape `T1/pag/m/sl' tried instead on input line 240.
-
+(Font)              Font shape `T1/pag/m/sl' tried instead on input line 237.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
 Make it at least 20.20125pt.
@@ -2248,7 +2258,13 @@ put/m/it/10 t\OT1/mdput/m/n/10 (-20) ) [] + [](\OML/mdput/m/it/10 t\OT1/mdput/m
 /n/10 (-20) )[] + \OML/mdput/m/it/10 b[] []$\T1/mdput/m/n/10 (-20) . 
  []
 
-
+File: png/logo_upsti.png Graphic file (type png)
+<use png/logo_upsti.png>
+Package pdftex.def Info: png/logo_upsti.png  used on input line 342.
+(pdftex.def)             Requested size: 56.9055pt x 20.20125pt.
+LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
+(Font)              scaled to size 11.28003pt on input line 342.
+[3]
 Overfull \hbox (1.06885pt too wide) in paragraph at lines 342--348
 []$[] \OT1/mdput/m/n/10 (-20) = \OMS/mdput/m/n/10  \OML/mdput/m/it/10 l[][][] \
 OMS/mdput/m/n/10   \OML/mdput/m/it/10 l[][] [] [][] \OT1/mdput/m/n/10 (-20) + 
@@ -2258,13 +2274,7 @@ put/m/n/10 (-20) (\OML/mdput/m/it/10 t\OT1/mdput/m/n/10 (-20) )[] [] \OML/mdput
 10 (-20) )[] +
  []
 
-File: png/logo_upsti.png Graphic file (type png)
-<use png/logo_upsti.png>
-Package pdftex.def Info: png/logo_upsti.png  used on input line 354.
-(pdftex.def)             Requested size: 56.9055pt x 20.20125pt.
-LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
-(Font)              scaled to size 11.28003pt on input line 354.
-[3]
+
 Overfull \hbox (5.20578pt too wide) in paragraph at lines 388--389
 []$\OT1/mdput/m/n/10 (-20) = \OML/mdput/m/it/10 m[] [] \OMS/mdput/m/n/10 
  []
@@ -2285,7 +2295,11 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 419.
-
+File: png/logo_upsti.png Graphic file (type png)
+<use png/logo_upsti.png>
+Package pdftex.def Info: png/logo_upsti.png  used on input line 431.
+(pdftex.def)             Requested size: 56.9055pt x 20.20125pt.
+[4]
 Overfull \hbox (34.8881pt too wide) in paragraph at lines 431--438
 []\T1/mdput/m/n/10 (-20) On consi-dère que $\OML/mdput/m/it/10 C[]\OT1/mdput/m/
 n/10 (-20) (\OML/mdput/m/it/10 p\OT1/mdput/m/n/10 (-20) ) = 0$\T1/mdput/m/n/10 
@@ -2293,11 +2307,7 @@ n/10 (-20) (\OML/mdput/m/it/10 p\OT1/mdput/m/n/10 (-20) ) = 0$\T1/mdput/m/n/10
  (\OML/mdput/m/it/10 p\OT1/mdput/m/n/10 (-20) ) = []$ $= []$ $= []$
  []
 
-File: png/logo_upsti.png Graphic file (type png)
-<use png/logo_upsti.png>
-Package pdftex.def Info: png/logo_upsti.png  used on input line 438.
-(pdftex.def)             Requested size: 56.9055pt x 20.20125pt.
-[4]
+
 Overfull \hbox (9.01285pt too wide) in paragraph at lines 444--447
 []$\OML/mdput/m/it/10 Q[]\OT1/mdput/m/n/10 (-20) (\OML/mdput/m/it/10 p\OT1/mdpu
 t/m/n/10 (-20) ) = [] \OML/mdput/m/it/10 T\OT1/mdput/m/n/10 (-20) (\OML/mdput/m
@@ -2311,7 +2321,7 @@ t/m/n/10 (-20) ) = [] \OML/mdput/m/it/10 T\OT1/mdput/m/n/10 (-20) (\OML/mdput/m
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 462.
-<images/fig_04.png, id=95, 154.6578pt x 95.8782pt>
+<images/fig_04.png, id=94, 154.6578pt x 95.8782pt>
 File: images/fig_04.png Graphic file (type png)
 <use images/fig_04.png>
 Package pdftex.def Info: images/fig_04.png  used on input line 467.
@@ -2319,13 +2329,16 @@ Package pdftex.def Info: images/fig_04.png  used on input line 467.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 492.
-LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
-(Font)              scaled to size 9.40002pt on input line 499.
+Package mdframed Info: Not enough space on this page on input line 496.
 File: png/logo_upsti.png Graphic file (type png)
 <use png/logo_upsti.png>
-Package pdftex.def Info: png/logo_upsti.png  used on input line 502.
+Package pdftex.def Info: png/logo_upsti.png  used on input line 496.
 (pdftex.def)             Requested size: 56.9055pt x 20.20125pt.
 [5 <./images/fig_04.png>]
+Package mdframed Info: Not enough space on this page on input line 496.
+LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
+(Font)              scaled to size 9.40002pt on input line 499.
+
 Overfull \hbox (49.0652pt too wide) in paragraph at lines 505--509
 []\T1/mdput/m/n/10 (-20) On a $\OML/mdput/m/it/10 Q[]\OT1/mdput/m/n/10 (-20) (\
 OML/mdput/m/it/10 p\OT1/mdput/m/n/10 (-20) ) = \OML/mdput/m/it/10 C[]\OT1/mdput
@@ -2351,16 +2364,19 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 536.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package logreq Info: Writing requests to 'Centrale_2019_Corrige.run.xml'.
 \openout1 = `Centrale_2019_Corrige.run.xml'.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 536.
  ) 
 Here is how much of TeX's memory you used:
- 45396 strings out of 492902
- 848409 string characters out of 3133550
- 1439582 words of memory out of 3000000
- 48453 multiletter control sequences out of 15000+200000
+ 45398 strings out of 492902
+ 848452 string characters out of 3133550
+ 1436582 words of memory out of 3000000
+ 48455 multiletter control sequences out of 15000+200000
  748915 words of font info for 251 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,21n,77p,1012b,1944s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2377,7 +2393,7 @@ es/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/adobe/utopia/putri8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/u
 rw/avantgar/uagd8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/avantgar/ua
 gdo8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/avantgar/uagko8a.pfb>
-Output written on Centrale_2019_Corrige.pdf (6 pages, 10196893 bytes).
+Output written on Centrale_2019_Corrige.pdf (6 pages, 10197146 bytes).
 PDF statistics:
  347 PDF objects out of 1000 (max. 8388607)
  74 named destinations out of 1000 (max. 500000)
