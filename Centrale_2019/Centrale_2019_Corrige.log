@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.18)  13 JUN 2019 22:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.18)  13 JUN 2019 22:16
 entering extended mode
 **./Centrale_2019_Corrige.tex
 (Centrale_2019_Corrige.tex
@@ -2364,19 +2364,16 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 536.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package logreq Info: Writing requests to 'Centrale_2019_Corrige.run.xml'.
 \openout1 = `Centrale_2019_Corrige.run.xml'.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 536.
  ) 
 Here is how much of TeX's memory you used:
- 45398 strings out of 492902
- 848452 string characters out of 3133550
- 1436582 words of memory out of 3000000
- 48455 multiletter control sequences out of 15000+200000
+ 45396 strings out of 492902
+ 848409 string characters out of 3133550
+ 1436584 words of memory out of 3000000
+ 48453 multiletter control sequences out of 15000+200000
  748915 words of font info for 251 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,21n,77p,1012b,1944s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2393,7 +2390,7 @@ es/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/adobe/utopia/putri8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/u
 rw/avantgar/uagd8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/avantgar/ua
 gdo8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/avantgar/uagko8a.pfb>
-Output written on Centrale_2019_Corrige.pdf (6 pages, 10197146 bytes).
+Output written on Centrale_2019_Corrige.pdf (6 pages, 10197465 bytes).
 PDF statistics:
  347 PDF objects out of 1000 (max. 8388607)
  74 named destinations out of 1000 (max. 500000)
