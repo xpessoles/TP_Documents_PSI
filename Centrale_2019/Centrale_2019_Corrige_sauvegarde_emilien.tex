@@ -217,53 +217,50 @@ D'une part, $H(p)=\dfrac{\varepsilon (p)}{Z^*(p)}$ et d'autre part, $F(p)=\dfrac
 
 En mettant cette fonction de transfert sous forme canonique, on  obtient : 
 
-\begin{align*}
+$
 H(p)=\dfrac{2\xi\cdot p}{\omega_0}\dfrac{1+\dfrac{p}{2\xi\omega_0}}{1+\dfrac{2\xi}{\omega_0}p+\dfrac{p^2}{\omega_0^2}}
-\end{align*}
+$.
 
 \begin{itemize}
 \item Le module de cette fonction de transfert en remplaçant $p$ par $i\omega$ représente le rapport des amplitudes en régime permanent vis-à-vis d'une entrée $z*(t)$ sinusoïdale : 
-\begin{align*}
+$
 \dfrac{\varepsilon_2}{A_2}=\Vert H(i\omega_2)\Vert
-\end{align*}
+$.
 \item L'argument de cette fonction de transfert en remplaçant $p$ par $i\omega$ représente le déphasage en régime permanent vis-à-vis d'une entrée $z^*(t)$ sinusoïdale : 
-\begin{align*}
-\Theta_2-\Phi_2=arg\left(H(i\omega_2)\right)
-\end{align*}
+$
+\Theta_2-\Phi_2=\arg\left(H(i\omega_2)\right)
+$.
 \end{itemize}
 
-Ainsi on trouve : 
-
-\begin{align*}
+Ainsi on a : 
+$
 \left\{
 \begin{array}{c}
 \varepsilon_2=A_2\cdot \Vert H(i\omega_2)\Vert\\
 \\
-\Theta_2=arg\left(H(i\omega_2)\right)+\Phi_2
+\Theta_2=\arg\left(H(i\omega_2)\right)+\Phi_2
 \end{array}
 \right.
-\end{align*}
+$.
 
-=======
-\vspace{1cm}
+
 Supposons que  $z_2(t)=A_2\sin \left(\omega_2 t + \Phi_2 \right)$. De plus, $\varepsilon_2(t)=\varepsilon_2 \sin \left( \omega_2 t + \Theta_2 \right)$. On a donc, $\varepsilon_2 = || H\left( i\omega_2\right)|| A_2$, $\Phi_2 - \Theta_2 = \arg \left(H\left(i\omega_2\right)\right)$.
->>>>>>> 
 
-\textbf{Remarque }: il aurait sûrement été préférable de préciser ici au candidat qu'on a $z_n(t)=A_n\sin \left(2\pi f_n t + \Phi_n \right)=A_n\sin \left(\omega_n t + \Phi_n \right)$. 
+
+
 
 En considérant de faibles pulsations telles que $\omega\ll \omega_0$, on peut effectuer l'approximation : 
-
-\begin{align*}
+$
 H(p)\approx \dfrac{2\xi\cdot p}{\omega_0}
-\end{align*}
+$.
 
 On obtient donc bien : 
-
-\begin{align*}
+$
 \Vert H(i\omega)\Vert\approx K\cdot \omega
-\end{align*}
-
+$ 
 avec $K=\dfrac{2\xi}{\omega_0}$.
+
+\textbf{Remarque }: il aurait sûrement été préférable de préciser ici au candidat qu'on a $z_n(t)=A_n\sin \left(2\pi f_n t + \Phi_n \right)=A_n\sin \left(\omega_n t + \Phi_n \right)$. 
 
 \subparagraph{}	
 Lorsque $\omega << \omega_0$, $\left|\left|  \dfrac{1}{p^2+2\xi\omega_0 p + \omega_0^2} \right|\right|$ tend vers 0. Calculons $\left|\left|  \left( j \omega \right) ^2+2\xi\omega_0  \omega j  \right|\right| =\sqrt{4\xi^2\omega_0^2 \omega^2 + \omega^2} =\omega \sqrt{4\xi^2\omega_0^2  + 1}$. 
@@ -272,15 +269,13 @@ On a donc $|| H\left( i\omega\right)|| \simeq K\omega $ avec $K=\sqrt{4\xi^2\ome
 
 \textcolor{red}{A VERIFIER Au final, $\varepsilon_2 \simeq \omega_2 \sqrt{4\xi^2\omega_0^2  + 1} A_2\sin \left(\omega_2 t + \Phi_2 \right) $.}
 
-\subparagraph{??}	~\\
-
+\subparagraph{}	~\\
 D'après l'exigence 1.3.3, $\dfrac{\varepsilon_2}{A_2}<10^{-2}$, on obtient alors la relation suivante : $
-\dfrac{\varepsilon_2}{A_2}\approx \dfrac{2\xi\omega_2}{\omega_0}<10^{-2}$. 
+\dfrac{\varepsilon_2}{A_2}\approx \dfrac{2\xi\omega_2}{\omega_0}<10^{-2}$.  \textcolor{red}{XP : Pourquoi ?}
 
-Ce qui donne $
-\omega_0>200\xi\omega_2\approx \SI{603}{rad.s^{-1}}$
+Ce qui donne $\omega_0>200\xi\omega_2\approx \SI{603}{rad.s^{-1}}$
 
-D'après le cahier des charges l'exigence 1.2 concernant l'asservissement en position et donc la fonction de transfert $F(p)$ impose une bande passante (que l'on suppose à $\SI{0}{dB}$) inférieure à $\SI{30}{rad.s^{-1}}$. Il s'agit d'une fonction de transfert du second ordre et la bande passante à $\SI{0}{dB}$ est de l'ordre de $\omega_0\approx \SI{600}{rad.s^{-1}}$. \textbf{Le cahier des charges est donc bien respecté.}
+D'après le cahier des charges l'exigence 1.2 concernant l'asservissement en position, et donc la fonction de transfert $F(p)$, impose une bande passante (que l'on suppose à $\SI{0}{dB}$), inférieure à $\SI{30}{rad.s^{-1}}$. $F(p)$ est une fonction de transfert du second ordre de gain 1 et la bande passante à $\SI{0}{dB}$ est de l'ordre de $\omega_0\approx \SI{600}{rad.s^{-1}}$. \textbf{Le cahier des charges est donc bien respecté.}
 
 
 % Piste 2 Calculons $\omega_{BP}$ tel que $||F\left(j\omega_{BP}\right)|| = 0$ : 
@@ -302,7 +297,7 @@ D'après le cahier des charges l'exigence 1.2 concernant l'asservissement en pos
 % Piste 1Supposons que $\dfrac{\varepsilon_2}{A_2} < 10^{-2}$ (exigence 1.3.2), on a alors $  \sqrt{4\xi^2\omega_0^2  + 1} \sin \left(\omega_2 t + \Phi_2 \right) < 10^{-2} $ 
 % $\Rightarrow  \sqrt{4\omega_0^2  + 1} \sin \left(\omega_2 t + \Phi_2 \right) < 10^{-2} $.
 
-\textbf{Remarque :} je ne comprends pas bien le début de la question : << En considérant $\varepsilon_2$, déterminer (...) >>.
+\textbf{Remarque :} je ne comprends pas bien la formulation de la question : << En considérant $\varepsilon_2$, déterminer (...) >>.
 
 
 \section{Analyse géométrique et élaboration du modèle dynamique du robot esclave}
@@ -324,8 +319,8 @@ capteurs installés sur le robot en conséquence.
 D'après le cahier des charges $\varepsilon_r<1\%$. 
 D'après la figure 4, la variation maximale des déplacement est de $\SI{7,5}{mm}$. Il faudrait donc une résolution de $s_{\text{max}}=\SI{75}{\mu m}$
 
-% XP Je ne vois pas comment déterminer la résolution à partir de la courbe.
 
+\textcolor{red}{XP : Je ne vois pas comment déterminer la résolution à partir de la courbe. Pb de l'exigence 1.2.1 avec la précision de $\SI{10}{\mu m}$.}
 
 \subparagraph{}%11
 On a $\lambda(t)=\lambda_0 + \dfrac{p}{2\pi} \theta_{83}$. 
@@ -348,13 +343,14 @@ En projetant $\vect{BD}$ dans la base $\base{x_2'}{y_2'}{z_2'}$, on a
  $ =l_3\left( \cos \theta_{32} \vect{y_2'} - \sin\theta_{32} \vect{x_2'}  \right)+\left( \lambda_0 + \dfrac{p}{2\pi} \theta_{83} +l_4\right)\vect{z_2'}$.
  
  Avec l'hypothèse que $\theta_{32}$ reste petit, on a  $\vect{BD}=l_3\left(  \vect{y_2'} - \theta_{32} \vect{x_2'}  \right)+\left( \lambda_0 + \dfrac{p}{2\pi} \theta_{83} +l_4\right)\vect{z_2'}$.
- 
-  Ainsi, $\left(x_D,y_D,z_D\right)=
-\left(-l_3 \theta_{32},l_3, \lambda_0 + \dfrac{p}{2\pi} \theta_{83} +l_4\right)$.
+  Ainsi,
+  
+  $\left(x_D,y_D,z_D\right)=
+\left(-l_3 \theta_{32},l_3, \lambda_0 + \dfrac{p}{2\pi} \theta_{83} +l_4\right)$. \textcolor{red}{XP : et $\lambda_0$ ?}
 
 \subparagraph{}%13
 
-Soit, $S_D=3\sqrt{S_X^2+S_Y^2+S_Z^2}$. Par calcul différentiel :  
+Soit, $s_D=3\sqrt{s_X^2+s_Y^2+s_Z^2}$. Par calcul différentiel :  \textcolor{red}{XP?}
 
 \begin{minipage}{0.5\textwidth}
 \begin{align*}
@@ -403,23 +399,31 @@ On a donc, en régime permanent, $\vect{C_{73}}=C_{73}\vect{z'_2}=C_{m2}\dfrac{\
 
 \subparagraph{}%15
 Au vu du tracé expérimental de $C_{73}$ en fonction de $C_{m2}$, on peut réaliser une linéarisation sur l'intervalle $[0,10]$ et $C_{73}\simeq 3 C_{m2}$. 
-D'après les données constructeur, on a $C_{73}=C_{m2}\dfrac{\eta_9}{r_9}=C_{m2}\dfrac{0,78}{0,25}=3,12$.
+D'après les données constructeur, on a $C_{73}=C_{m2}\dfrac{\eta_9}{r_9}=C_{m2}\dfrac{0,78}{0,25}=\SI{3,12}{Nm}$.
 
 On peut donc valider les valeurs données par le constructeur.
 \subsection{Élaboration du modèle dynamique d’un axe du robot esclave}
 
 
 \subparagraph{}%16
+\begin{center}
+\includegraphics[width=\textwidth]{images/fig_02}
+\end{center}
 
 \begin{center}
 \includegraphics[width=0.8\textwidth]{images/graphe_structure_complet.jpg}
 \end{center}
 \subparagraph{}%17
+On cherche à déterminer le couple $C_{m2}$ à fournir sur l'arbre 7. L'arbre 7 est en rotation autour de l'axe $\axe{N}{z_2'}$. Il entraîne l'ensemble $\left\{3+8+4+5\right\}$ en rotation autour de l'axe $\axe{B}{z_2'}$.
 
-Proposition d'ordonnancement des isolements et des théorèmes associés : 
+\begin{center}
+\includegraphics[width=\textwidth]{images/fig_05}
+\end{center}
+
+On propose donc les isolements et des théorèmes associés suivants : 
 \begin{itemize}
-\item Isolement de $\left\{3+8+4+5\right\}$ : théorème du Moment dynamique selone $\left(B,\overrightarrow{z}_2'\right)$ qui permet de relier l'action de 7 sur 3 aux paramètres de mouvement de l'ensemble $\left\{3+8+4+5\right\}$ qui représente dans le cas particulier du mouvement souhaité la même classe d'équivalence.
-\item Isolement de $7$ : théorème du Moment dynamique selon $\left(N,\overrightarrow{z}_2'\right)$ qui revient à un TMS car l'inertie de 7 est négligeable qui permet de relier $C_{m2}$ à l'action de 3 sur 7.
+\item isolement de $\left\{3+8+4+5\right\}$ : théorème du moment dynamique en projection sur $\left(B,\overrightarrow{z}_2'\right)$ qui permet de relier l'action de 7 sur 3 aux paramètres de mouvement de l'ensemble $\left\{3+8+4+5\right\}$ qui représente dans le cas particulier du mouvement souhaité la même classe d'équivalence;
+\item isolement de $7$ : théorème du moment dynamique selon $\left(N,\overrightarrow{z}_2'\right)$ qui revient à un théorème du moment statique car l'inertie de 7 est négligeable. Cela permet de relier $C_{m2}$ à l'action de 3 sur 7.
 \end{itemize}
 \subparagraph{}%18
 On cherche $\vectv{G_4}{4}{1}$. On a $\vect{OG_4}=\vect{OA}+\vect{AB}+\vect{BC}+\vect{CG_4}$ $=l_0\vect{y_0}+l_1\vect{y_1}+l_2\vect{y_2}+l_2'\vect{y_2'}+l_3\vect{y_3}+\lambda(t)\vect{z_3}+b_4\vect{z_4}$.
