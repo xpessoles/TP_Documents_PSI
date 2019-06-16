@@ -466,31 +466,38 @@ l_3\left[ \left(\dot{\theta}_{21}\vect{z_2}+\dot{\theta}_{32}\vect{z_3} \right) 
 \dot{\lambda}(t)\vect{z_3}+
 b_4\left[ \left(\dot{\theta}_{21}\vect{z_2}+\dot{\theta}_{32}\vect{z_3} \right) \wedge \vect{z_3} \right]$. 
 
-$= 
--l_2 \dot{\theta}_{21}\vect{x_2} 
--l_2'\dot{\theta}_{21}\cos \alpha_2\vect{x_2}+
-l_3\left[ \dot{\theta}_{21}\vect{z_2}\wedge \vect{y_3}-\dot{\theta}_{32}\vect{x_3}  \right]+
-\lambda(t) \dot{\theta}_{21}\sin \alpha_2\vect{x_2} +
-\dot{\lambda}(t)\vect{z_3}+ b_4\dot{\theta}_{21}\sin \alpha_2\vect{x_2}$. 
-
-
-Par ailleurs, 
-$\vect{z_2}\wedge \vect{y_3}=\vect{z_2}\wedge \left( \cos \theta_{32} \vect{y_2'} -\sin \theta_{32} \vect{x_2'}  \right)$
-$= \cos \theta_{32} \vect{z_2}\wedge  \vect{y_2'} -\sin \theta_{32} \vect{z_2}\wedge\vect{x_2'}  $
-$= -\cos \theta_{32} \cos \alpha_2 \vect{x_2'} -\sin \theta_{32} \vect{y_2}  $.
-
-Au final, on a 
-
-$\vectv{G_4}{4}{1}=
--l_2 \dot{\theta}_{21}\vect{x_2} 
--l_2'\dot{\theta}_{21}\cos \alpha_2\vect{x_2}+
-l_3\left[ \dot{\theta}_{21}\left(-\cos \theta_{32} \cos \alpha_2 \vect{x_2'} -\sin \theta_{32} \vect{y_2}  \right)-\dot{\theta}_{32}\vect{x_3}  \right]+
-\lambda(t) \dot{\theta}_{21}\sin \alpha_2\vect{x_2} +
-\dot{\lambda}(t)\vect{z_3}+ b_4\dot{\theta}_{21}\sin \alpha_2\vect{x_2}$.
-
-
-En tenant compte de l'hypothèse $\dot{\theta}_{21}=0$, on a : $\vectv{G_4}{4}{1}=
+Or $\dot{\theta}_{21}=0$. On a donc :
+$\vectv{G_4}{4}{1}= 
+l_3\left(\dot{\theta}_{32}\vect{z_3} \wedge \vect{y_3} \right)+
+\dot{\lambda}(t)\vect{z_3} =
 -\dot{\theta}_{32}l_3\vect{x_3}  + \dot{\lambda}(t)\vect{z_3}$.
+
+%
+%$= 
+%-l_2 \dot{\theta}_{21}\vect{x_2} 
+%-l_2'\dot{\theta}_{21}\cos \alpha_2\vect{x_2}+
+%l_3\left[ \dot{\theta}_{21}\vect{z_2}\wedge \vect{y_3}-\dot{\theta}_{32}\vect{x_3}  \right]+
+%\lambda(t) \dot{\theta}_{21}\sin \alpha_2\vect{x_2} +
+%\dot{\lambda}(t)\vect{z_3}+ b_4\dot{\theta}_{21}\sin \alpha_2\vect{x_2}$. 
+%
+%
+%Par ailleurs, 
+%$\vect{z_2}\wedge \vect{y_3}=\vect{z_2}\wedge \left( \cos \theta_{32} \vect{y_2'} -\sin \theta_{32} \vect{x_2'}  \right)$
+%$= \cos \theta_{32} \vect{z_2}\wedge  \vect{y_2'} -\sin \theta_{32} \vect{z_2}\wedge\vect{x_2'}  $
+%$= -\cos \theta_{32} \cos \alpha_2 \vect{x_2'} -\sin \theta_{32} \vect{y_2}  $.
+%
+%Au final, on a 
+%
+%$\vectv{G_4}{4}{1}=
+%-l_2 \dot{\theta}_{21}\vect{x_2} 
+%-l_2'\dot{\theta}_{21}\cos \alpha_2\vect{x_2}+
+%l_3\left[ \dot{\theta}_{21}\left(-\cos \theta_{32} \cos \alpha_2 \vect{x_2'} -\sin \theta_{32} \vect{y_2}  \right)-\dot{\theta}_{32}\vect{x_3}  \right]+
+%\lambda(t) \dot{\theta}_{21}\sin \alpha_2\vect{x_2} +
+%\dot{\lambda}(t)\vect{z_3}+ b_4\dot{\theta}_{21}\sin \alpha_2\vect{x_2}$.
+%
+
+%En tenant compte de l'hypothèse $\dot{\theta}_{21}=0$, on a : $\vectv{G_4}{4}{1}=
+%-\dot{\theta}_{32}l_3\vect{x_3}  + \dot{\lambda}(t)\vect{z_3}$.
 
 
 \subparagraph{}%19
