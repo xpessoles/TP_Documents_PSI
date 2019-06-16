@@ -425,6 +425,7 @@ On propose donc les isolements et des théorèmes associés suivants :
 \item isolement de $\left\{3+8+4+5\right\}$ : théorème du moment dynamique en projection sur $\left(B,\overrightarrow{z}_2'\right)$ qui permet de relier l'action de 7 sur 3 aux paramètres de mouvement de l'ensemble $\left\{3+8+4+5\right\}$ qui représente dans le cas particulier du mouvement souhaité la même classe d'équivalence;
 \item isolement de $7$ : théorème du moment dynamique selon $\left(N,\overrightarrow{z}_2'\right)$ qui revient à un théorème du moment statique car l'inertie de 7 est négligeable. Cela permet de relier $C_{m2}$ à l'action de 3 sur 7.
 \end{itemize}
+Cet isolement permet de ne pas faire apparaître les inconnues dans les liaisons pivot entre 2 et 7 ainsi qu'entre 7 et 3. 
 \subparagraph{}%18
 On cherche $\vectv{G_4}{4}{1}$. On a $\vect{OG_4}=\vect{OA}+\vect{AB}+\vect{BC}+\vect{CG_4}$ $=l_0\vect{y_0}+l_1\vect{y_1}+l_2\vect{y_2}+l_2'\vect{y_2'}+l_3\vect{y_3}+\lambda(t)\vect{z_3}+b_4\vect{z_4}$.
 On a $\alpha_1=\dfrac{\pi}{4}$ et $\alpha_2=-\dfrac{\pi}{4}$.
@@ -546,6 +547,8 @@ m_4\left( \left(l_3 \vect{y_3} \right) \wedge  \left(-\ddot{\theta}_{32}l_3\vect
 =m_4\cdot l_3^2\ddot{\theta}_{32}
 \end{align*}
 
+  Au final,  $\vectmd{B}{4}{1}\cdot\vect{z_4} = J_4 \ddot{\theta}_{32}+\ddot{\theta}_{32}l_3^2 m_4 $.
+
 
 %
 %$= m_4\left( \left(l_3 \vect{y_3} + \lambda(t) \vect{z_3}+ b_4 \vect{z_4}\right) \wedge  \left(-\ddot{\theta}_{32}l_3\vect{x_3}\right)  + \left(l_3 \vect{y_3} + \lambda(t) \vect{z_3}+ b_4 \vect{z_4}\right) \wedge  \left(-l_3   \dot{\theta}_{32}^2  \vect{y_3}\right) + \left(l_3 \vect{y_3} + \lambda(t) \vect{z_3}+ b_4 \vect{z_4}\right) \wedge  \left(\ddot{\lambda}(t)\vect{z_3}\right) \right) \cdot \vect{z_4}$
@@ -562,25 +565,32 @@ m_4\left( \left(l_3 \vect{y_3} \right) \wedge  \left(-\ddot{\theta}_{32}l_3\vect
 %
 %  $= \ddot{\theta}_{32}l_3^2 m_4 $.
   
-  Au final,  $\vectmd{B}{4}{1}\cdot\vect{z_4} = J_4 \ddot{\theta}_{32}+\ddot{\theta}_{32}l_3^2 m_4 $.
+
 
 
 \subparagraph{}%21
 
 \subparagraph{}%22
+D'après l'expression donnée, on a $C_r(t)=J_{eq}\ddot{\theta}_{32}(t)-A C_{m2}(t)$.
+Lorsque la vitesse est constante, on a donc $C_r(t)=-A C_{m2}(t)$ avec $C_{m2}(t)=-\SI{53,25}{Nm}$.
 
+
+À accélération constante, $\ddot{\theta}_{32} = \dfrac{0,075}{0,25}=\SI{0,3}{rad.s^{-2}}$. On a donc 
+$J_{eq}=\dfrac{C_r(t)+A C_{m2}(t)}{\ddot{\theta}_{32}(t)}=\dfrac{C_r(t)-A 51,25}{0,3}=$.
+
+\textcolor{red}{XP : Calcul de A Q21  implique calcul de Cr ouis de Jeq.}
 \subparagraph{}%23
 
-\section{Définition et analyse de la chaine d’asservissement du robot esclave}
+\section{Définition et analyse de la chaîne d’asservissement du robot esclave}
 \begin{obj}
-Définir le régulateur de la chaine d’asservissement du robot esclave, analyser ses performances vis-à-vis
-des perturbations en se limitant à celles dues aux couples de frottement sec et compléter la chaine
+Définir le régulateur de la chaîne d’asservissement du robot esclave, analyser ses performances vis-à-vis
+des perturbations en se limitant à celles dues aux couples de frottement sec et compléter la chaîne
 d’asservissement par la compensation de ces efforts.
 \end{obj}
 
-\subsection{Calcul d’un correcteur et analyse partielle des performances de la chaine d’asservissement}
+\subsection{Calcul d’un correcteur et analyse partielle des performances de la chaîne d’asservissement}
 \begin{obj}
-Déterminer un correcteur pour la chaine d’asservissement de la position angulaire des articulations.
+Déterminer un correcteur pour la chaîne d’asservissement de la position angulaire des articulations.
 Afin d’aboutir à une démarche générale (indépendante d’une articulation particulière), la loi de commande
 sera paramétrée par le moment d’inertie équivalent de l’articulation considérée.
 \end{obj}
