@@ -42,7 +42,7 @@ stabilisation des mouvements physiologiques}
 
 \def\xxonglet{\textsf{CCS 2019}}
 
-\def\xxactivite{TD 01}
+\def\xxactivite{Corrigé}
 \def\xxauteur{\textsl{UPSTI}}
 
 
@@ -568,21 +568,102 @@ $
 
 
 \subparagraph{}%21
+
+
 Par analogie avec la question précédente, on a $\vectmd{B}{3}{1}\cdot\vect{z_4}= J_3\ddot{\theta}_{32}+\ddot{\theta}_{32}a_3^2 m_3$.
 
 En conséquence,  $\vectmd{B}{3+4+5+8}{1}\cdot\vect{z_4} = \left(J_3+J_4\right) \ddot{\theta}_{32}+\ddot{\theta}_{32}\left( a_3^2 m_3  +l_3^2 m_4  \right)$.
 
 
+\textcolor{red}{XP :il me semble que pour traiter la question serieusement il faudrait définir << proprement >> l'action de 3 sur 7}
+
+
+\textbf{On isole l'ensemble $\{3,4,5,8\}$.}
+
+
+\begin{itemize}
+\item On réalise le bilan des actions mécaniques extérieures. 
+\begin{itemize}
+\item \textcolor{red}{ XP : La pesanteur crée un moment en $B$ suivant  $\vect{z_0}$ (le schéma est trompeur)}.
+\item Action de la pesanteur sur 3 : 
+$\vectm{B}{\text{pes}}{3}\cdot \vect{z_4} $ $ =\left(\vect{BG_3}\wedge \left(-m_3g \vect{z_0}\right) \right)\vect{z_4}$ 
+$ =\left(\left( a_3\vect{y_3} + b_3\vect{z_3}  \right)\wedge \left(-m_3g \vect{z_0}\right)\right)\vect{z_4}$
+$ =\left( a_3\vect{y_4} \wedge \left(-m_3g \vect{z_0}\right)\right)\vect{z_4}$
+$ =\left( \vect{z_4} \wedge a_3\vect{y_4}\right)\cdot  \left(-m_3g \vect{z_0}\right)$
+$ = a_3 m_3g \left( \vect{x_3}\cdot \vect{z_0} \right)$
+$ = a_3 m_3g \left(  \cos\theta_{32} \vect{x_2'} +\sin\theta_{32} \vect{y_2'} \right)\cdot \vect{z_0} $
+
+On utilise les hypothèses de linéarisation vues précédemment et on a 
+$\vectm{B}{\text{pes}}{3}\cdot \vect{z_4}= a_3 m_3g \vect{x_2'} \cdot \vect{z_0} $ 
+$= a_3 m_3g \vect{x_2} \cdot \vect{z_0} $
+$= a_3 m_3g \left( \cos \theta_{21} \vect{x_1} +\sin \theta_{21} \vect{y_1} \right)\cdot \vect{z_0} $
+$= a_3 m_3g \left( \cos \theta_{21} \vect{x_0} +\sin \theta_{21}  \left( \cos \alpha_1 \vect{y_0} + \sin \alpha_1 \vect{z_0} \right) \right)\cdot \vect{z_0} $
+$= a_3 m_3g \sin \theta_{21}   \sin \alpha_1    $. En faisant l'application numérique, on a donc 
+$\vectm{B}{\text{pes}}{3}\cdot \vect{z_4}= a_3 m_3g  \dfrac{\sqrt{2}}{2} \dfrac{\sqrt{3}}{2}$
+
+\item Action de la pesanteur sur 4 : 
+$\vectm{B}{\text{pes}}{4}\cdot \vect{z_4} $ $ =\left(\vect{BG_4}\wedge \left(-m_4g \vect{z_0}\right) \right)\vect{z_4}$ 
+
+$ =\left(\left(l_3\vect{y_3} + \lambda(t) \vect{z_3} + b_4\vect{z_4} \right)\wedge \left(-m_4g \vect{z_0}\right) \right)\vect{z_4}$. 
+Par analogie avec le calcul précédent, $\vectm{B}{\text{pes}}{4}\cdot \vect{z_4} = l_3 m_4g  \dfrac{\sqrt{2}}{2} \dfrac{\sqrt{3}}{2} $.
+
+%$ = a_3 m_3g \left(  \cos\theta_{32} \vect{x_2} +\sin\theta_{32} \left(\cos\alpha_{2} \vect{y_2} +\sin\alpha_{2} \vect{z_2}\right) \right)\cdot \vect{z_0} $
+
+%$ = a_3 m_3g \left(  \cos\theta_{32} \left( \cos \theta_{21} \vect{x_1} +\sin \theta_{21} \vect{y_1} \right) +\sin\theta_{32} \left(\cos\alpha_{2} \left( \cos \theta_{21} \vect{y_1} -\sin \theta_{21} \vect{x_1} \right) +\sin\alpha_{2} \vect{z_1}\right) \right)\cdot \vect{z_0} $
+
+%$ = a_3 m_3g \left(  \cos\theta_{32} \left( \cos \theta_{21} \vect{x_0} +\sin \theta_{21} \left( \cos \alpha_1 \vect{y_0} + \sin \alpha_1 \vect{z_0} \right) \right) +\sin\theta_{32} \left(\cos\alpha_{2} \left( \cos \theta_{21} \left( \cos \alpha_1 \vect{y_0} + \sin \alpha_1 \vect{z_0} \right)  -\sin \theta_{21} \vect{x_0} \right) +\sin\alpha_{2}  \left( \cos \alpha_1 \vect{z_0} - \sin \alpha_1 \vect{y_0} \right)  \right) \right)\cdot \vect{z_0} $
+
+%$ = a_3 m_3g \left(  \cos\theta_{32} \left( \sin \theta_{21} \left(  \sin \alpha_1 \vect{z_0} \right) \right) +
+%\sin\theta_{32} \left(\cos\alpha_{2} \left( \cos \theta_{21} \left( \sin \alpha_1 \vect{z_0} \right)  \right) +\sin\alpha_{2}  %\left( \cos \alpha_1 \vect{z_0}  \right)  \right) \right)\cdot \vect{z_0} $. 
+
+\item $\vectm{B}{2}{3}\cdot \vect{z_0}=0$.
+\item $\vectm{B}{7}{3}\cdot \vect{z_4}=C_{73}$ (Indication du sujet).
+\end{itemize}
+\item En appliquant le théorème du moment dynamique en $B$ en projection sur $\vect{z}$ on a donc 
+$ C_{73} =  \left(J_3+J_4\right) \ddot{\theta}_{32}+\ddot{\theta}_{32}\left( a_3^2 m_3  +l_3^2 m_4  \right) + g  \dfrac{\sqrt{6}}{4} \left( a_3 m_3 + l_3 m_4\right) $.
+\end{itemize}
+
+\textbf{Il semblerait que ce qui est attendu soit d'utiliser ${C_{73}}=C_{m2}\dfrac{\eta_9}{r_9}$, mais cette relation avait été établie en régime permanent ce qui n'est plus le cas. } 
+
+$ C_{m2}\dfrac{\eta_9}{r_9}=  \left(J_3+J_4  + a_3^2 m_3  +l_3^2 m_4 \right) \ddot{\theta}_{32} + g  \sin \theta_{21}   \sin \alpha_1 \left( a_3 m_3 + l_3 m_4\right) $.
+
+Par identification, on a donc :
+\begin{itemize}
+\item $J_{eq} = J_3+J_4  + a_3^2 m_3  +l_3^2 m_4$;
+\item $A  =\dfrac{\eta_9}{r_9}$;
+\item $C_r(t)=-g  \sin \theta_{21}   \sin \alpha_1 \left( a_3 m_3 + l_3 m_4\right) $.
+\end{itemize}
+
+\textbf{Remarque :  $J_{eq}$ dépendrait aussi de $a_3$ et $m_3$.}
+%
+% \textbf{On isole l'ensemble $\{7\}$.}
+%\begin{itemize}
+%\item On réalise le bilan des actions mécaniques extérieures. 
+%\begin{itemize}
+%\item La pesanteur ne crée pas de moment en $B$ suivant  $\vect{z_0}$.
+%\item $\vectm{N}{2}{7}\cdot \vect{z_0}=C_{m2}$.
+%\item \textbf{On fait l'hypothèse que $\vectm{B}{3}{7}\cdot \vect{z_0}=-C_{73}$.} \textcolor{red}{XP C'est du n'importe quoi....}.
+%\end{itemize}
+%\item En appliquant le théorème du moment dynamique en $B$ en projection sur $\vect{z}$ (l'inertie de 7 est négligée) on a donc $ C_{m2} - C_{73} =  0$. \textcolor{red}{XP Ce qui est n'importe quoi parce qu'on a vu qu'il y avait un pb de rendement, mais le rendement en dynamique....}.
+%\end{itemize}
+%
+%\textcolor{red}{XP Peut être que le résultat attendu est le suivant (mais ce serait pas terrible)}.
+%
+%$ C_{m2}\dfrac{\eta_9}{r_9}=  \left(J_3+J_4\right) \ddot{\theta}_{32}+\ddot{\theta}_{32}\left( a_3^2 m_3  +l_3^2 m_4  \right)$.
 
 \subparagraph{}%22
 D'après l'expression donnée, on a $C_r(t)=J_{eq}\ddot{\theta}_{32}(t)-A C_{m2}(t)$.
-Lorsque la vitesse est constante, on a donc $C_r(t)=-A C_{m2}(t)$ avec $C_{m2}(t)=-\SI{53,25}{Nm}$.
+Lorsque la vitesse est constante, on a donc $C_r(t)=-A C_{m2}(t)$ avec $C_{m2}(t)=-\SI{53,25}{Nm}$ et 
+$C_r(t)= \dfrac{0,78}{0,25} \cdot  53,25  = \SI{166,14}{Nm}$.   \textbf{Trop grand.}
 
 
 À accélération constante, $\ddot{\theta}_{32} = \dfrac{0,075}{0,25}=\SI{0,3}{rad.s^{-2}}$. On a donc 
-$J_{eq}=\dfrac{C_r(t)+A C_{m2}(t)}{\ddot{\theta}_{32}(t)}=\dfrac{C_r(t)-A 51,25}{0,3}=$.
+$J_{eq}=\dfrac{C_r(t)+A C_{m2}(t)}{\ddot{\theta}_{32}(t)}=\dfrac{C_r(t)-A 51,25}{0,3}$ 
+$\dfrac{166,14  -51,25\dfrac{0,78}{0,25}}{0,3}=\SI{20,8}{kg.m^2}$. 
 
-\textcolor{red}{XP : Calcul de A Q21  implique calcul de Cr ouis de Jeq.}
+
+\textbf{Encore trop gros}
+
 \subparagraph{}%23
 
 \section{Définition et analyse de la chaîne d’asservissement du robot esclave}
