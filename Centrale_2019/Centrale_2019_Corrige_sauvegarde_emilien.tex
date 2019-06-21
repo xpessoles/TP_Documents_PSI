@@ -760,7 +760,16 @@ Pour un signal périodique en entrée d'amplitude $B$, l'écart sera un signal p
 \textbf{Conclure ?}
 
 \subparagraph{}\textit{}%31
+On a $C_j(p)=C_u(p)+C_a(p)$ 
+$=\left(\varepsilon(p)K_1 - K_2 p Q_j(p)\right) + C_a(p) $
 
+$=\left( \left( Q_j^\star (p)-Q_j(p)\right)K_1 - K_2 p Q_j(p)\right) + C_a(p) $
+
+$=\left( \left( Q_j^\star (p)-Q_j(p)\right)K_1 - K_2 p C_j(p) T(p)\right) + C_a(p) $.
+
+En considérant que  la consigne est suivie sans erreur, on a 
+$C_j(p)= - K_2 p C_j(p) T(p) + C_a(p) $ et donc $C_j(p)=\dfrac{1}{1+K_2p T(p)}C_a(p)$.
+\textcolor{red}{Est-ce la bonne piste ?}
 \subparagraph{}\textit{}%32
 %% $K_a(p)$ = ??
 
