@@ -546,7 +546,10 @@ m_4\left( \left(l_3 \vect{y_3} \right) \wedge  \left(-\ddot{\theta}_{32}l_3\vect
 =m_4\cdot l_3^2\ddot{\theta}_{32}
 $
 
+
   Au final,  $\vectmd{B}{4}{1}\cdot\vect{z_4} = J_4 \ddot{\theta}_{32}+\ddot{\theta}_{32}l_3^2 m_4 $.
+  
+
 
 
 %
@@ -605,6 +608,28 @@ $\vectm{B}{\text{pes}}{3}\cdot \vect{z_4}= a_3 m_3g  \dfrac{\sqrt{2}}{2} \dfrac{
 $\vectm{B}{\text{pes}}{4}\cdot \vect{z_4} $ $ =\left(\vect{BG_4}\wedge \left(-m_4g \vect{z_0}\right) \right)\vect{z_4}$ 
 
 $ =\left(\left(l_3\vect{y_3} + \lambda(t) \vect{z_3} + b_4\vect{z_4} \right)\wedge \left(-m_4g \vect{z_0}\right) \right)\vect{z_4}$. 
+
+\textbf{Pour Emilien }
+$
+\left(\vect{BG_4}\wedge \left(-m_4g \vect{z_0}\right) \right)\vect{z_{4,3}}
+=\overrightarrow{z}_3\wedge l_3\overrightarrow{y}_3\cdot \left(-m_4\cdot g\cdot \overrightarrow{z}_0\right)=m_4l_3g\overrightarrow{x}_3\cdot \overrightarrow{z}_0
+$
+
+Or,
+
+$\overrightarrow{x}_3=\cos\theta_{32}\overrightarrow{x}_{2,2'}+\sin\theta_{32}\overrightarrow{y}_{2'}$
+
+avec $\cos\theta_{32}\approx 1$ et $\sin\theta_{32}\approx 0$
+
+ Donc, 
+ 
+ $\overrightarrow{x}_3\cdot \overrightarrow{z}_0=\left(\cos\theta_{21}\overrightarrow{x}_{1,0}+\sin\theta_{21}\overrightarrow{y}_1\right)\cdot \overrightarrow{z}_0=\cos\theta_{21}\sin\alpha_1=\dfrac{\sqrt{2}}{4}$
+ On obtient alors,
+ 
+ $\vectm{B}{\text{pes}}{4}\cdot \vect{z_4} = l_3 m_4g  \dfrac{\sqrt{2}}{4}$.
+
+\textbf{Pour Xavier : }
+
 Par analogie avec le calcul précédent, $\vectm{B}{\text{pes}}{4}\cdot \vect{z_4} = l_3 m_4g  \dfrac{\sqrt{2}}{2} \dfrac{\sqrt{3}}{2} $.
 
 %$ = a_3 m_3g \left(  \cos\theta_{32} \vect{x_2} +\sin\theta_{32} \left(\cos\alpha_{2} \vect{y_2} +\sin\alpha_{2} \vect{z_2}\right) \right)\cdot \vect{z_0} $
@@ -625,6 +650,8 @@ $ C_{73} =  \left(J_3+J_4\right) \ddot{\theta}_{32}+\ddot{\theta}_{32}\left( a_3
 
 \textbf{Il semblerait que ce qui est attendu soit d'utiliser ${C_{73}}=C_{m2}\dfrac{\eta_9}{r_9}$, mais cette relation avait été établie en régime permanent ce qui n'est plus le cas. } 
 
+
+\textbf{Selon Xavier}
 $ C_{m2}\dfrac{\eta_9}{r_9}=  \left(J_3+J_4  + a_3^2 m_3  +l_3^2 m_4 \right) \ddot{\theta}_{32} + g  \sin \theta_{21}   \sin \alpha_1 \left( a_3 m_3 + l_3 m_4\right) $.
 
 Par identification, on a donc :
@@ -632,6 +659,16 @@ Par identification, on a donc :
 \item $J_{eq} = J_3+J_4  + a_3^2 m_3  +l_3^2 m_4$;
 \item $A  =\dfrac{\eta_9}{r_9}$;
 \item $C_r(t)=-g  \sin \theta_{21}   \sin \alpha_1 \left( a_3 m_3 + l_3 m_4\right) $.
+\end{itemize}
+
+\textbf{Selon Emilien}
+$ C_{m2}\dfrac{\eta_9}{r_9}=  \left(J_3+J_4  + a_3^2 m_3  +l_3^2 m_4 \right) \ddot{\theta}_{32} + g \dfrac{\sqrt{2}}{4} \left( a_3 m_3 + l_3 m_4\right) $.
+
+Par identification, on a donc :
+\begin{itemize}
+\item $J_{eq} = J_3+J_4  + a_3^2 m_3  +l_3^2 m_4$;
+\item $A  =\dfrac{\eta_9}{r_9}$;
+\item $C_r(t)=-g  \dfrac{\sqrt{2}}{4} \left( a_3 m_3 + l_3 m_4\right) $.
 \end{itemize}
 
 \textbf{Remarque :  $J_{eq}$ dépendrait aussi de $a_3$ et $m_3$.}
@@ -664,7 +701,63 @@ $\dfrac{166,14  -51,25\dfrac{0,78}{0,25}}{0,3}=\SI{20,8}{kg.m^2}$.
 
 \textbf{Encore trop gros}
 
+\textbf{Selon Emilien :}
+
+Soit,
+\begin{itemize}
+\item $C^{a}_{m2}=C_{m2}(t)\approx-51,2N.m$ pour $t\in\left[0;0,25\right]$ ;
+\item $C^{b}_{m2}=C_{m2}(t)\approx-53N.m$ pour $t\in\left[0,25;0,75\right]$ ;
+\item $C^{b}_{m2}=C_{m2}(t)\approx-55N.m$ pour $t\in\left[0,75;1\right]$ ;
+\item $\ddot{\theta}_{32}(t)=\ddot{\theta}_{32a}=\dfrac{0,075}{0,25}=0,3rad\cdot s^{-2}$ pour $t\in \left[0;0,25\right]$
+\end{itemize}
+
+On obtient alors 3 équations : 
+\begin{align*}
+\begin{array}{c}
+(a)\\
+\\
+(b)\\
+\\
+(c)\\
+\end{array}
+&
+\left\{
+\begin{array}{c}
+J_{eq}\ddot{\theta}_{32a}=A\cdot C^{a}_{m2}+C_r(t)\\
+\\
+0=A\cdot C^{b}_{m2}+C_r(t)\\
+\\
+-J_{eq}\ddot{\theta}_{32a}=A\cdot C^{c}_{m2}+C_r(t)\\
+\end{array}
+\right.
+\end{align*}
+
+En combinant les équations : 
+\begin{itemize}
+\item $(b) \rightarrow C_r(t)=-A\cdot  C^{b}_{m2}=-\dfrac{\eta_9}{r_9}C^{b}_{m2}\approx -165.67 N.m$
+\item $(a)-(c)\rightarrow 2 J_{eq} \ddot{\theta}_{32a}=A\cdot \left(C^{a}_{m2}-C^{c}_{m2}\right)$
+\end{itemize}
+
+On obtient alors,
+
+\begin{align*}
+J_{eq}=\dfrac{A\cdot \left(C^{a}_{m2}-C^{c}_{m2}\right)}{2\ddot{\theta}_{32a}} \approx 19,76 kg\cdot m^2
+\end{align*}
+
+
 \subparagraph{}%23
+
+En faisant l'application numérique à partir des données de l'énoncé, on trouve : 
+
+\begin{align*}
+\left\{
+\begin{array}{c}
+J_{eqth}=18,1kg\cdot m^2\\
+\\
+C_{rth}=-85,57N\cdot m
+\end{array}
+\right}
+\end{align*}
 
 \section{Définition et analyse de la chaîne d’asservissement du robot esclave}
 \begin{obj}
