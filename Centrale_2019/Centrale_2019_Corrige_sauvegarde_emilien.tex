@@ -756,7 +756,7 @@ J_{eqth}=18,1kg\cdot m^2\\
 \\
 C_{rth}=-85,57N\cdot m
 \end{array}
-\right}
+\right.
 \end{align*}
 
 \section{Définition et analyse de la chaîne d’asservissement du robot esclave}
@@ -790,22 +790,29 @@ $= \dfrac{1}{\dfrac{J_{\text{eq}}}{K_1}p^2+\dfrac{K_2}{K_1}p+1}$.
 On a donc $\dfrac{1}{\omega_0^2}=\dfrac{J_{\text{eq}}}{K_1}$ et $\dfrac{2\xi}{\omega_0}=\dfrac{K_2}{K_1}$. On a donc $K_1=J_{\text{eq}}\omega_0^2$ et $K_2=\dfrac{2\xi K_1}{\omega_0}=2\xi J_{\text{eq}}\omega_0$.
 
 \subparagraph{}%25
+On imagine ici qu'il faut considérer que $Q*_j(p)=0$.
+
 On a $C_j(p)=-\left(K_1+K_2 p\right) Q_j(p)$ et $Q_j(p)=\left(C_j(p)+C_{\text{ext}}(p)\right)T(p)$.  On a donc  
 
+%$Q_j(p)=\left(-\left(K_1+K_2 p\right) Q_j(p)+C_{\text{ext}}(p)\right)T(p)$
+%$\Leftrightarrow \left(1-\left(K_1+K_2 p\right)T(p) \right)Q_j(p)=C_{\text{ext}}(p)$
+%$\Leftrightarrow \dfrac{Q_j(p)}{C_{\text{ext}}(p)}=\dfrac{1}{1-\left(K_1+K_2 p\right)T(p) }$.
+
+
 $Q_j(p)=\left(-\left(K_1+K_2 p\right) Q_j(p)+C_{\text{ext}}(p)\right)T(p)$
-$\Leftrightarrow \left(1-\left(K_1+K_2 p\right)T(p) \right)Q_j(p)=C_{\text{ext}}(p)$
-$\Leftrightarrow \dfrac{Q_j(p)}{C_{\text{ext}}(p)}=\dfrac{1}{1-\left(K_1+K_2 p\right)T(p) }$.
+$\Leftrightarrow \left(1+\left(K_1+K_2 p\right)T(p) \right)Q_j(p)=C_{\text{ext}}(p)\cdot T(p)$
+$\Leftrightarrow \dfrac{Q_j(p)}{C_{\text{ext}}(p)}=\dfrac{T(p)}{1+\left(K_1+K_2 p\right)T(p) }$.
 
-En utilisant les valeurs déterminées précédemment, on a donc $D(p)=\dfrac{1}{1-\left(J_{\text{eq}}\omega_0^2+2\xi J_{\text{eq}}\omega_0 p\right)\dfrac{1}{J_{\text{eq}}p^2} }$
+En utilisant les valeurs déterminées précédemment, on a donc $D(p)=\dfrac{\dfrac{1}{J_{eq}p^2}}{1+\left(J_{\text{eq}}\omega_0^2+2\xi J_{\text{eq}}\omega_0 p\right)\dfrac{1}{J_{\text{eq}}p^2} }$
 
-$=\dfrac{p^2}{p^2-2\xi\omega_0 p-\omega_0^2 }$.
+$=\dfrac{1}{J_{eq}p^2+2\xi J_{\text{eq}}\omega_0 p+J_{eq}\omega_0^2}=\dfrac{\dfrac{1}{J_{eq}\omega_0^2}}{\dfrac{p^2}{\omega_0^2}+\dfrac{2\xi}{\omega_0}p+1}$.
 
 On a $C_{\text{ext}}(p)=\dfrac{C_{\text{ext} 0}}{p}$. En conséquence, 
 $\lim\limits_{t\to +\infty} \varepsilon(t) = \lim\limits_{p\to 0} p\varepsilon(p)$.
 Par ailleurs,  $\varepsilon(p)=-Q_j(p)=-D(p)C_{\text{ext}}(p)$.
 
-On a alors $\lim\limits_{t\to +\infty} \varepsilon(t) = \lim\limits_{p\to 0} -pD(p)C_{\text{ext}}(p)= \lim\limits_{p\to 0} -p\dfrac{p^2}{p^2-2\xi\omega_0 p-\omega_0^2 }\dfrac{C_{\text{ext} 0}}{p}$
-$= \lim\limits_{p\to 0} -\dfrac{C_{\text{ext} 0}p^2}{p^2-2\xi\omega_0 p-\omega_0^2 }  = -C_{\text{ext} 0}$.
+On a alors $\lim\limits_{t\to +\infty} \varepsilon(t) = \lim\limits_{p\to 0} -pD(p)C_{\text{ext}}(p)= \lim\limits_{p\to 0} -p\dfrac{\dfrac{1}{J_{eq}\omega_0^2}}{\dfrac{p^2}{\omega_0^2}+\dfrac{2\xi}{\omega_0}p+1}\cdot \dfrac{C_{ext0}}{p}$
+$=  -\dfrac{C_{\text{ext} 0}}{J_{eq}\omega_0}$.
 \textbf{Conclure.}
 
 
@@ -831,6 +838,12 @@ et  $\hat{C}_{\text{ext}}(p)=C(p)S(p)$.
 $\hat{C}_{\text{ext}}(p)=C(p)\left(Q_j(p)-B(p)\left( C_j(p)+\hat{C}_{\text{ext}}(p) \right)\right)$
 
 $\Leftrightarrow \hat{C}_{\text{ext}}(p) \left(1+ C(p)B(p)\right)=C(p)\left(Q_j(p)-C(p)B(p) \right)$
+
+Il semblerait qu'il manque une information concernant le schéma bloc. Il faudrait sans doute ajouter \^{Q}$_j(p)$. Cela donnerait directement :
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{images/DR_B_corrige.pdf}
+\end{center}
 
 \subparagraph{}%27
 
