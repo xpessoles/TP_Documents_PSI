@@ -20,6 +20,7 @@
 \courstrue
 \coursfalse
 
+
 % -------------------------------------
 % Déclaration des titres
 % -------------------------------------
@@ -68,6 +69,26 @@ Concours Centrale Supelec -- PSI 2019%
 %---------------------------------------------------------------------------
 
 \usepackage{bm}
+
+
+\usepackage{framed}
+\definecolor{violetf}{RGB}{112,48,160}
+\definecolor{violetc}{RGB}{230,224,236}
+\newenvironment{oldpy}[1][\hsize]%
+{%
+    \def\FrameCommand%
+    {%
+%\rotatebox{90}{\textit{\textsf{Python}}} 
+\rotatebox{90}{\includegraphics[height=.6cm]{png/logo_python}} 
+        {\color{violetf}\vrule width 3pt}%
+        \hspace{0pt}%must no space.
+        \fboxsep=\FrameSep\colorbox{violetc}%
+    }%
+    \MakeFramed{\hsize #1 \advance\hsize-\width\FrameRestore}%
+}%
+{\endMakeFramed}%
+
+
 \begin{document}
 %\chapterimage{png/Fond_Cin}
 \input{style/new_pagegarde}
@@ -81,6 +102,13 @@ Concours Centrale Supelec -- PSI 2019%
 
 \section{Analyse des propriétés des signaux physiologiques}
 
+ \begin{oldpy}
+ \begin{py}
+def toto() :
+    return None
+    \end{pu
+ \end{oldpy}
+ 
 \begin{obj}
 Analyser les propriétés des signaux physiologiques et en déduire des éléments du cahier des charges
 de la loi de commande pour assurer le déplacement du robot avec le niveau de précision requis.
