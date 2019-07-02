@@ -962,6 +962,64 @@ K'_2=2\sqrt{K'_1\cdot J_{eq}}=10\cdot J_{eq}\cdot \omega_0
 
 \subparagraph{}%29
 
+Notons $H_{28}(p)$ la fonction de transfert déterminée à la question 28 : 
+
+\begin{align*}
+H_{28}(p)=\dfrac{\text{\^{C}}_{ext}(p)}{C_{ext}(p)}=\dfrac{K(p)\cdot T(p)}{1+K(p)\cdot T(p)}
+\end{align*}
+
+Avec $Q^*_j(p)=0$.
+
+\begin{align*}
+C_j(p)=\text{\~{C}}_j(p)-\text{\^{C}}_{ext}(p)=-\left(K_1+K_2\cdot p\right)Q_j(p)-H_{28}(p)C_{ext}(p)\\
+\end{align*}
+
+D'après la lecture du schéma bloc : 
+
+\begin{align*}
+Q_j(p)=T(p)\left(C_j(p)+C_{ext}(p)\right)=T(p)\left(-\left(K_1+K_2\cdot p\right)Q_j(p)+\left(1-H_{28}(p)\right)C_{ext}(p)\right)\\
+\Leftrightarrow\\
+Q_j(p)\left(1+T(p)\left(K_1+K_2\cdot p\right)\right)=C_{ext}(p)T(p)\left(1-H_{28}(p)\right)\\
+\end{align*}
+
+On trouve donc : 
+
+\begin{align*}
+\dfrac{Q_j(p)}{C_{ext}(p)}=\dfrac{T(p)}{\left(1+K(p)\cdot T(p)\right)\left(1+T(p)\left(K_1+K_2\cdot p\right)\right)}
+\end{align*}
+
+Avec $K(p)=K'_1+K'_2\cdot p$ et $T(p)=\dfrac{1}{J_{eq}p^2}$,
+
+
+\begin{align*}
+\dfrac{Q_j(p)}{C_{ext}(p)}=\dfrac{J_{eq}p^2}{\left(J_{eq}p^2+K'_1+K'_2\cdot p\right)\left(J_{eq}p^2+K_1+K_2\cdot p\right)}
+\end{align*}
+
+D'après les questions 24 et 27,
+
+\begin{align*}
+\dfrac{Q_j(p)}{C_{ext}(p)}=\dfrac{\dfrac{p^2}{J_{eq}}}{\left(p+\omega'_0\right)^2\left(p+\omega_0\right)^2}
+\end{align*}
+
+
+
+
+\begin{itemize}
+\item \textbf{Stabilité : } On remarque que les pôles de la FTBF sont à partie réelles strictement négatives ($-\omega_0$ et $-\omega'_0$) ce qui \textbf{est une condition nécessaire et suffisante de stabilité.}
+\item \textbf{Précision : }
+
+Soit $\varepsilon(p)=-Q_j(p)=-\dfrac{\dfrac{p^2}{J_{eq}}}{\left(p+\omega'_0\right)^2\left(p+\omega_0\right)^2}C_{ext}(p)$. En considérant $c_{ext}$ comme une constante, $C_{ext}(p)=\dfrac{C_0}{p}$.
+
+L'erreur statique vis-à-vis d'une perturbation constante est donnée par :
+
+\begin{align*}
+\varepsilon_s= \lim_{p\rightarrow0} p\varepsilon(p)= \lim_{p\rightarrow0}\left[-\dfrac{\dfrac{C_0\cdot p^2}{J_{eq}}}{\left(p+\omega'_0\right)^2\left(p+\omega_0\right)^2}\right]=0
+\end{align*} 
+
+\textbf{L'erreur statique vis-à-vis d'une perturbation constante est bien nulle.}
+\end{itemize}
+
+
 
 
 
