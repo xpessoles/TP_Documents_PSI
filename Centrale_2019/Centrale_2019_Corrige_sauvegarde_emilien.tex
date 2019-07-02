@@ -860,10 +860,14 @@ En manipulant le schéma bloc on peut obtenir :
 
 \subparagraph{}%28
 
-\textbf{Remarque : } On suppose que l'on doit utiliser la même structure d'asservissement qu'en III.A. Ainsi en manipulant le schéma bloc on obtient : 
+\textbf{Remarque : } On peut hésiter entre prendre la structure de la partie III.A (Méthode A) ou donner un $K(p)$ équivalent sous la forme d'un correcteur P.D. (Méthode B).
+
+\begin{minipage}[t]{0.4\textwidth}
+\textbf{Méthode A :}
+Ainsi en manipulant le schéma bloc on obtient : 
 
 \begin{center}
-\begin{large}
+%\begin{large}
 \begin{tikzpicture}
 \sbEntree{E0}
 \sbComp[4]{c2}{E0}
@@ -880,24 +884,64 @@ En manipulant le schéma bloc on peut obtenir :
 \sbRelieryx{b4-S}{b10}
 \sbRelierxy[]{b10}{c2}
 \end{tikzpicture}
-\end{large}
+%\end{large}
 \end{center}
 
 La fonction de transfert en boucle fermée est donnée par : 
 
 \begin{align*}
 H_{BF}(p)=\dfrac{\dfrac{K'_1}{J_{eq}p^2}}{1+\dfrac{K'_1}{J_{eq}p^2}\left(1+\dfrac{K'_2}{K'_1}p\right)}=
-\dfrac{K'_1}{J_{eq}\cdot p^2+K'_2\cdot p+K'_1}=\dfrac{1}{1+\dfrac{K'_2}{K'_1}+\dfrac{J_{eq}}{K'_1}p^2}
+\\
+\dfrac{K'_1}{J_{eq}\cdot p^2+K'_2\cdot p+K'_1}=\dfrac{1}{1+\dfrac{K'_2}{K'_1}p+\dfrac{J_{eq}}{K'_1}p^2}
 \end{align*}
 
-Par identification et avec ce qu'impose la cahier des charges.
+
+\end{minipage}
+\vline
+\begin{minipage}[t]{0.4\textwidth}
+\textbf{Méthode B :}
+
+Ainsi en manipulant le schéma bloc on obtient : 
+
+\begin{center}
+\begin{large}
+\begin{tikzpicture}
+\sbEntree{E0}
+\sbComp[4]{c2}{E0}
+\sbRelier[$C_{ext}(p)$]{E0}{c2}
+\sbBloc[1]{b2}{$K'_1+K'_2\cdot p$}{c2}
+\sbRelier{c2}{b2}
+\sbBloc[3]{b4}{$T(p)$}{b2}
+\sbRelier[]{b2}{b4}
+\sbSortie[4]{S}{b4}
+\sbRelier[\^{C}$_{ext}(p)$]{b4}{S}
+\sbDecaleNoeudy[4]{S}{v}
+\sbBlocr[4]{b10}{$1$}{v}
+%\sbBlocr[4]{b10}{$1+\frac{K_'2\cdot p}{K'_1}$}{v}
+\sbRelieryx{b4-S}{b10}
+\sbRelierxy[]{b10}{c2}
+\end{tikzpicture}
+\end{large}
+\end{center}
+
+La fonction de transfert en boucle fermée est donnée par : 
+
+\begin{align*}
+H_{BF}(p)=\dfrac{\dfrac{K'_1+K'_2\cdot p}{J_{eq}p^2}}{1+\dfrac{K'_1+K'_2\cdot p}{J_{eq}p^2}}=
+\dfrac{K'_1+K'_2\cdot p}{J_{eq}\cdot p^2+K'_2\cdot p+K'_1}=\dfrac{1+\dfrac{K'_2}{K'_1}p}{1+\dfrac{K'_2}{K'_1}p+\dfrac{J_{eq}}{K'_1}p^2}
+\end{align*}
+
+
+\end{minipage}
+
+Par identification, pour les deux méthodes et avec ce qu'impose la cahier des charges.
 
 \begin{align*}
 \left\{
 \begin{array}{c}
-\omega'_0=\sqrt{K'_1}{J_{eq}}=5\omega_0\\
+\omega'_0=\sqrt{\dfrac{K'_1}{J_{eq}}}=5\omega_0\\
 \\
-\xi=\dfrac{\omega'_0}{2}\dfrac{K'_2}{K'_1}=\dfrac{1}{2}\sqrt{sqrt{K'_1}{J_{eq}}}\dfrac{K'_2}{K'_1}=1
+\xi=\dfrac{\omega'_0}{2}\dfrac{K'_2}{K'_1}=\dfrac{1}{2}\sqrt{\dfrac{K'_1}{J_{eq}}}\dfrac{K'_2}{K'_1}=1
 \end{array}
 \right.
 \end{align*}
@@ -917,6 +961,8 @@ K'_2=2\sqrt{K'_1\cdot J_{eq}}=10\cdot J_{eq}\cdot \omega_0
 \textbf{La fonction de transfert en boucle ouverte est de classe 2 ainsi l'erreur statique est nulle. }
 
 \subparagraph{}%29
+
+
 
 
 \section{Analyse des performances vis-à-vis des mouvements respiratoires}
