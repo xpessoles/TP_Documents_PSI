@@ -1032,11 +1032,33 @@ envisagée sous la forme d’une anticipation sur la consigne pour améliorer le
 
 
 \subparagraph{}\textit{}%30
-Pour un signal périodique en entrée d'amplitude $B$, l'écart sera un signal périodique d'amplitude $0,066B$.  Soit \SI{2,64e-3}{rad} et \SI{5,94e-3}{rad}.
+
+\textbf{Pour Emilien}
+Pour un signal périodique en entrée d'amplitude $B$, l'écart sera un signal périodique d'amplitude $0,066\cdot B\cdot \omega_i$, avec $i=\left\{1,2\right\}$ et $\omega_i=2\pi f_i$ ($f_1=0,24Hz$ et $f_2=0,48Hz$).
+On note $\varepsilon_0$ l'amplitude de l'écart en régime permanent.
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline 
+$f_i$ & $f_1$ & $f_2$ \\ 
+\hline 
+$\varepsilon_0$  & $0,066\cdot 2\pi f_1$ & $0,066\cdot 2\pi f_2$ \\ 
+\hline 
+Application numérique sur $\dfrac{\varepsilon_0}{B}$ & \SI{9,95e-2}{} & \SI{19,91e-2}{} \\ 
+\hline 
+\end{tabular} 
+\end{center}
+ 
+Ces valeurs ne sont pas conformes au cahier des charges car l'exigence 5.2.2 impose : $\dfrac{\varepsilon_j}{B_j}<10^{-2}$.
+
+\textbf{Pour Xavier}  
+ L'écart sera un signal périodique d'amplitude $0,066B$ Soit \SI{2,64e-3}{rad} et \SI{5,94e-3}{rad}.
 
 \textbf{Conclure ?}
 
 \subparagraph{}\textit{}%31
+
+\textbf{Pour Xavier}
 On a $C_j(p)=C_u(p)+C_a(p)$ 
 $=\left(\varepsilon(p)K_1 - K_2 p Q_j(p)\right) + C_a(p) $
 
@@ -1047,8 +1069,31 @@ $=\left( \left( Q_j^\star (p)-Q_j(p)\right)K_1 - K_2 p C_j(p) T(p)\right) + C_a(
 En considérant que  la consigne est suivie sans erreur, on a 
 $C_j(p)= - K_2 p C_j(p) T(p) + C_a(p) $ et donc $C_j(p)=\dfrac{1}{1+K_2p T(p)}C_a(p)$.
 \textcolor{red}{Est-ce la bonne piste ?}
+
+\textbf{Pour Emilien}
+
+\begin{itemize}
+\item \textbf{Expression temporelle du couple idéal $c_j(t)$ : }
+D'après le schéma bloc dans le domaine de Laplace : $C_j(p)=\dfrac{Q_j(p)}{T(p)}=J_{eq}p^2Q_j(p)$, en repassant dans le domaine temporel : 
+
+\begin{align*}
+c_j(t)=J_{eq}\dfrac{d^2q_j(t)}{dt^2}=J_{eq}\dfrac{d^2q^*_j(t)}{dt^2}
+\end{align*}
+\item \textbf{Expression temporelle du couple idéal $c_u(t)$ : }
+D'après le schéma bloc dans le domaine de Laplace : $C_u(p)=K_1\cdot (Q^*_j(p)-Q_j(p))-K_2\cdot p\cdot Q_j(p)=-K_2\cdot p\cdot Q^*_j(p)$, en repassant dans le domaine temporel : 
+
+\begin{align*}
+c_u(t)=-K_{2}\dfrac{dq^*_j(t)}{dt}
+\end{align*}
+\item Au niveau du comparateur on lit : $c_a(t)=c_j(t)-c_u(t)$, ainsi $c_a(t)=J_{eq}\dfrac{d^2q^*_j(t)}{dt^2}+K_{2}\dfrac{dq^*_j(t)}{dt}$.
+\end{itemize}
 \subparagraph{}\textit{}%32
-%% $K_a(p)$ = ??
+
+
+\begin{itemize}
+\item \textbf{Détermination de $K_a(p)$ :} on déduit de la question précédente (en supposant les condtions initiales nulles) : $K_a(p)=\dfrac{C_a(p)}{Q^*_j(p)}=J_{eq}\cdot p^2+K_2\cdot p$.
+\item \textbf{Détermination de $F(p)$ :}
+\end{itemize}
 
 On a $Q_j(p) = C_j(p) T(p)= \left( Q_j^{\star}(p) K_a(p) + C_u(p) \right) T(p)$
 $= \left( Q_j^{\star}(p) K_a(p) + C_u(p) \right) T(p)$
@@ -1079,18 +1124,42 @@ $\Leftrightarrow Q_j(p) =
 $\Leftrightarrow Q_j(p)\left(1     +T(p)K_1     + T(p)K_2 p\right)= 
       Q_j^{\star}(p)T(p) \left(  K_a(p)     +K_1 \right)     $
 
-On a donc $F(p)=\dfrac{Q_j(p)}{Q_j^{\star}(p)}=\dfrac{ K_a(p) +K_1}{1+T(p)K_1 + T(p)K_2 p}$.
+On a donc $F(p)=\dfrac{Q_j(p)}{Q_j^{\star}(p)}=\dfrac{\left(K_a(p) +K_1\right)T(p)}{1+T(p)K_1 + T(p)K_2 p}$.
 
+En factorisant par $T(p)$ au numérateur et au dénominateur puis en remplaçant $T(p)$ par $\dfrac{1}{J_{eq}p^2}$ et $K_a(p)=J_{eq}\cdot p^2+K_2\cdot p$, on obtient,
+
+\begin{align*}
+F(p)=\dfrac{J_{eq}p^2+K_1+K_2\cdot p}{J_{eq}p^2+K_1+K_2\cdot p}=1
+\end{align*}
+
+Ainsi quelque soit la forme de l'entrée, $Q^*_j(p)=Q_j(p)$ et donc l'erreur est nulle en particulier vis-à-vis de signaux de consigne sinusoïdaux.
 
 \subparagraph{}\textit{}%33
 
+En reprenant le résultat de la question 31 qui permet d'exprimer $c_a(t)$ dans le domaine temporel, on obtient,
+
+\begin{align*}
+c_a(t)=J_{eq}\dfrac{d^2\delta q^*_j(t)}{dt^2}+K_{2}\dfrac{d\delta q^*_j(t)}{dt}
+=-J_{eq}\omega_1^2B_1\sin\left(\omega_1t+\theta_1\right)+K_2\omega_2B_2\cos\left(\omega_2t+\theta_2\right)
+\end{align*}
+
 \subparagraph{}\textit{}%34
 
+\begin{itemize}
+\item Sur la figure 18, on peut juger des performances liées aux exigences 1.2 ("Asservissement au point de fonctionnement") :
+\begin{itemize}
+\item \textbf{Précision :} La précision obtenue est optimale. La position angulaire obtenue est confondu à la consigne en régime permanent ce qui se traduira par un écart en régime permanent inférieur à $10\mu m$.
+\item \textbf{Rapidité : } le temps de réponse à $5\%$ est la durée entre l'instant de l'échelon et l'instant au délà duquel la position est comprise entre $\pm 5\%$ de la valeur finale et qui correspond ici à la durée au delà de laquelle la position est comprise entre $0,57\mu m$ et $0,63\mu m$. Sur la figure 18, on relève approximativement $0,15s<0,2s$ comme l'exige l'exigence 1.2.2.  
+\end{itemize}
+\item Sur la figure 19, on peut juger des performances liées aux exigences 1.3 ("Suivi des mouvements physiologiques"). 
+\begin{itemize}
+\item le signal de consigne possède une fréquence d'environ $0,5Hz$ et une amplitude de consigne $0,34rad$. 
+\item l'erreur relatif est égal en amplitude à environ $\dfrac{75\times 10^{-6}}{0,34}\approx 2,2\times 10^{-4}<10^{-2}$ ce qui est bien conforme au cahier des charges.
+\end{itemize}
+\end{itemize}
+
 \end{document}
-\begin{center}
-\includegraphics[width=\linewidth]{images/img_04}
-%\textit{}
-\end{center}
+
 
 
 
