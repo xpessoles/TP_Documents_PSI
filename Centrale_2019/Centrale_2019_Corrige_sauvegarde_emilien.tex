@@ -398,6 +398,9 @@ $\eta_9 =\dfrac{C_{73}\dot{\theta}_{32}}{C_{m2}\dot{\theta}_{72}}=\dfrac{C_{73}}
 On a donc, en régime permanent, $\vect{C_{73}}=C_{73}\vect{z'_2}=C_{m2}\dfrac{\eta_9}{r_9}\vect{z'_2}$.
 
 
+\textbf{Remarque :} peut-être aurait-il été souhaitable de préciser que l'on souhaite cette relation en régime permanent ?
+
+
 \subparagraph{}%15 --
 Au vu du tracé expérimental de $C_{73}$ en fonction de $C_{m2}$, on peut réaliser une linéarisation sur l'intervalle $[0,10]$ et $C_{73}\simeq 3 C_{m2}$. 
 D'après les données constructeur, on a $C_{73}=C_{m2}\dfrac{\eta_9}{r_9}=C_{m2}\dfrac{0,78}{0,25}=\SI{3,12}{Nm}$.
@@ -429,7 +432,7 @@ On propose donc les isolements et des théorèmes associés suivants :
 \item isolement de $7$ : théorème du moment dynamique selon $\left(N,\overrightarrow{z}_2'\right)$ qui revient à un théorème du moment statique car l'inertie de 7 est négligeable. Cela permet de relier $C_{m2}$ à l'action de 3 sur 7.
 \end{itemize}
 Cet isolement permet de ne pas faire apparaître les inconnues dans les liaisons pivot entre 2 et 7 ainsi qu'entre 7 et 3. 
-\subparagraph{}%18
+\subparagraph{}%18 --
 On cherche $\vectv{G_4}{4}{1}$. On a $\vect{OG_4}=\vect{OA}+\vect{AB}+\vect{BC}+\vect{CG_4}$ $=l_0\vect{y_0}+l_1\vect{y_1}+l_2\vect{y_2}+l_2'\vect{y_2'}+l_3\vect{y_3}+\lambda(t)\vect{z_3}+b_4\vect{z_4}$.
 On a $\alpha_1=\dfrac{\pi}{4}$ et $\alpha_2=-\dfrac{\pi}{4}$.
 
@@ -504,13 +507,13 @@ l_3\left(\dot{\theta}_{32}\vect{z_3} \wedge \vect{y_3} \right)+
 %-\dot{\theta}_{32}l_3\vect{x_3}  + \dot{\lambda}(t)\vect{z_3}$.
 
 
-\subparagraph{}%19
+\subparagraph{}%19 --
 En utilisant l'évolution de $\dot{\theta}_{32}$, on peut déterminer le déplacement angulaire effectué en traçant l'aire sous la courbe :
 $\theta_{32}=\dfrac{1}{2}\left( 1+0,5\right)\times 0,075 =\SI{0,056}{rad}\simeq 3^{\text{o}}$.
 
 Cet angle étant faible, on peut donc considérer que $\forall t \cos \left(\theta_{32}(t)\right)\simeq 1$ et $\sin\left(\theta_{32}(t)\right)\simeq 0$.
 
-\subparagraph{}%20
+\subparagraph{}%20 -- 
 
 On donne $J_4$ le moment d'inertie du bras 4 autour de l'axe $\axe{G_4}{z_4}$.
 
@@ -573,7 +576,7 @@ $
 
 
 
-\subparagraph{}%21
+\subparagraph{}%21 --
 
 
 Par analogie avec la question précédente, on a $\vectmd{B}{3}{1}\cdot\vect{z_4}= J_3\ddot{\theta}_{32}+\ddot{\theta}_{32}a_3^2 m_3$.
@@ -691,7 +694,7 @@ Par identification, on a donc :
 %
 %$ C_{m2}\dfrac{\eta_9}{r_9}=  \left(J_3+J_4\right) \ddot{\theta}_{32}+\ddot{\theta}_{32}\left( a_3^2 m_3  +l_3^2 m_4  \right)$.
 
-\subparagraph{}%22
+\subparagraph{}%22 --
 D'après l'expression donnée, on a $C_r(t)=J_{eq}\ddot{\theta}_{32}(t)-A C_{m2}(t)$.
 Lorsque la vitesse est constante, on a donc $C_r(t)=-A C_{m2}(t)$ avec $C_{m2}(t)=-\SI{53,25}{Nm}$ et 
 $C_r(t)= \dfrac{0,78}{0,25} \cdot  53,25  = \SI{166,14}{Nm}$.   \textbf{Trop grand.}
@@ -708,10 +711,10 @@ $\dfrac{166,14  -51,25\dfrac{0,78}{0,25}}{0,3}=\SI{20,8}{kg.m^2}$.
 
 Soit,
 \begin{itemize}
-\item $C^{a}_{m2}=C_{m2}(t)\approx-51,2N.m$ pour $t\in\left[0;0,25\right]$ ;
-\item $C^{b}_{m2}=C_{m2}(t)\approx-53N.m$ pour $t\in\left[0,25;0,75\right]$ ;
-\item $C^{b}_{m2}=C_{m2}(t)\approx-55N.m$ pour $t\in\left[0,75;1\right]$ ;
-\item $\ddot{\theta}_{32}(t)=\ddot{\theta}_{32a}=\dfrac{0,075}{0,25}=0,3rad\cdot s^{-2}$ pour $t\in \left[0;0,25\right]$
+\item $C^{a}_{m2}=C_{m2}(t)\approx-\SI{51,2}{Nm}$ pour $t\in\left[0;0,25\right]$ ;
+\item $C^{b}_{m2}=C_{m2}(t)\approx-\SI{53}{Nm}$ pour $t\in\left[0,25;0,75\right]$ ;
+\item $C^{b}_{m2}=C_{m2}(t)\approx-\SI{55}{Nm}$ pour $t\in\left[0,75;1\right]$ ;
+\item $\ddot{\theta}_{32}(t)=\ddot{\theta}_{32a}=\dfrac{0,075}{0,25}=\SI{0,3}{rad. s^{-2}}$ pour $t\in \left[0;0,25\right]$
 \end{itemize}
 
 On obtient alors 3 équations : 
@@ -737,31 +740,32 @@ J_{eq}\ddot{\theta}_{32a}=A\cdot C^{a}_{m2}+C_r(t)\\
 
 En combinant les équations : 
 \begin{itemize}
-\item $(b) \rightarrow C_r(t)=-A\cdot  C^{b}_{m2}=-\dfrac{\eta_9}{r_9}C^{b}_{m2}\approx -165.67 N.m$
+\item $(b) \rightarrow C_r(t)=-A\cdot  C^{b}_{m2}=-\dfrac{\eta_9}{r_9}C^{b}_{m2}\approx \SI{-165.67}{Nm}$
 \item $(a)-(c)\rightarrow 2 J_{eq} \ddot{\theta}_{32a}=A\cdot \left(C^{a}_{m2}-C^{c}_{m2}\right)$
 \end{itemize}
 
 On obtient alors,
 
 \begin{align*}
-J_{eq}=\dfrac{A\cdot \left(C^{a}_{m2}-C^{c}_{m2}\right)}{2\ddot{\theta}_{32a}} \approx 19,76 kg\cdot m^2
+J_{eq}=\dfrac{A\cdot \left(C^{a}_{m2}-C^{c}_{m2}\right)}{2\ddot{\theta}_{32a}} \approx \SI{19,76}{kg}\cdot m^2
 \end{align*}
 
 
-\subparagraph{}%23
+\subparagraph{}%23 --
 
 En faisant l'application numérique à partir des données de l'énoncé, on trouve : 
 
 \begin{align*}
 \left\{
 \begin{array}{c}
-J_{eqth}=18,1kg\cdot m^2\\
+J_{\text{eqth}}=\SI{18,1}{kg m^2}\\
 \\
-C_{rth}=-85,57N\cdot m
+C_{\text{rth}}=-\SI{85,57}{N m}
 \end{array}
 \right.
 \end{align*}
 
+\textcolor{red}{xp : écarts et commentaires, validité modele}
 \section{Définition et analyse de la chaîne d’asservissement du robot esclave}
 \begin{obj}
 Définir le régulateur de la chaîne d’asservissement du robot esclave, analyser ses performances vis-à-vis
@@ -776,7 +780,7 @@ Afin d’aboutir à une démarche générale (indépendante d’une articulation
 sera paramétrée par le moment d’inertie équivalent de l’articulation considérée.
 \end{obj}
 
-\subparagraph{}%24
+\subparagraph{}%24 --
 En exprimant l'équation différentielle proposée dans le domaine de Laplace, on a 
 $J_{\text{eq}} p^2{Q}_j(p)=C_j(p)+C_{\text{ext}}(p)$.
 En utilisant le schéma-blocs, on a $Q_j(p)=\left(C_{\text{ext}}(p)+C_{\text{j}}(p)\right)T(p)$. 
@@ -792,7 +796,7 @@ $= \dfrac{1}{\dfrac{J_{\text{eq}}}{K_1}p^2+\dfrac{K_2}{K_1}p+1}$.
 
 On a donc $\dfrac{1}{\omega_0^2}=\dfrac{J_{\text{eq}}}{K_1}$ et $\dfrac{2\xi}{\omega_0}=\dfrac{K_2}{K_1}$. On a donc $K_1=J_{\text{eq}}\omega_0^2$ et $K_2=\dfrac{2\xi K_1}{\omega_0}=2\xi J_{\text{eq}}\omega_0$.
 
-\subparagraph{}%25
+\subparagraph{}%25 --
 On imagine ici qu'il faut considérer que $Q*_j(p)=0$.
 
 On a $C_j(p)=-\left(K_1+K_2 p\right) Q_j(p)$ et $Q_j(p)=\left(C_j(p)+C_{\text{ext}}(p)\right)T(p)$.  On a donc  
@@ -816,7 +820,8 @@ Par ailleurs,  $\varepsilon(p)=-Q_j(p)=-D(p)C_{\text{ext}}(p)$.
 
 On a alors $\lim\limits_{t\to +\infty} \varepsilon(t) = \lim\limits_{p\to 0} -pD(p)C_{\text{ext}}(p)= \lim\limits_{p\to 0} -p\dfrac{\dfrac{1}{J_{eq}\omega_0^2}}{\dfrac{p^2}{\omega_0^2}+\dfrac{2\xi}{\omega_0}p+1}\cdot \dfrac{C_{ext0}}{p}$
 $=  -\dfrac{C_{\text{ext} 0}}{J_{eq}\omega_0}$.
-\textbf{Conclure.} L'erreur ici n'est pas nul est elle dépend de l'inertie. 
+
+\textbf{Conclusion :} l'erreur ici n'est pas nulle et elle dépend de l'inertie. 
 
 
 \subsection{Amélioration des performances par compensation du couple de perturbation}
@@ -828,7 +833,7 @@ Améliorer les performances de la loi de commande vis-à-vis des couples perturb
 \includegraphics[width=.4\linewidth]{images/fig_04}
 \end{center}
 
-\subparagraph{}%26
+\subparagraph{}%26 --
 On note $A(p)$, $B(p)$ et $C(p)$ les trois fonctions de transfert des trois blocs recherchés. 
 
 
@@ -842,13 +847,13 @@ $\hat{C}_{\text{ext}}(p)=C(p)\left(Q_j(p)-B(p)\left( C_j(p)+\hat{C}_{\text{ext}}
 
 $\Leftrightarrow \hat{C}_{\text{ext}}(p) \left(1+ C(p)B(p)\right)=C(p)\left(Q_j(p)-C(p)B(p) \right)$
 
-Il semblerait qu'il manque une information concernant le schéma bloc. Il faudrait sans doute ajouter \^{Q}$_j(p)$. Cela donnerait directement :
+\textbf{Remarque :} il semblerait qu'il manque une information concernant le schéma bloc. Il faudrait sans doute ajouter $\hat{Q}_j(p)$. Cela donnerait la figure suivante.
 
 \begin{center}
 \includegraphics[width=0.4\textwidth]{images/DR_B_corrige.pdf}
 \end{center}
 
-\subparagraph{}%27
+\subparagraph{}%27 --
 
 En manipulant le schéma bloc on peut obtenir : 
 
@@ -862,9 +867,10 @@ En manipulant le schéma bloc on peut obtenir :
 
 \subparagraph{}%28
 
-\textbf{Remarque : } On peut hésiter entre prendre la structure de la partie III.A (Méthode A) ou donner un $K(p)$ équivalent sous la forme d'un correcteur P.D. (Méthode B).
+\textbf{Remarque : } on peut hésiter entre prendre la structure de la partie III.A (Méthode A) ou donner un $K(p)$ équivalent sous la forme d'un correcteur P.D. (Méthode B).
 
-\begin{minipage}[t]{0.4\textwidth}
+%\begin{minipage}[t]{0.4\textwidth}
+\begin{multicols}{2}
 \textbf{Méthode A :}
 Ainsi en manipulant le schéma bloc on obtient : 
 
@@ -873,13 +879,13 @@ Ainsi en manipulant le schéma bloc on obtient :
 \begin{tikzpicture}
 \sbEntree{E0}
 \sbComp[4]{c2}{E0}
-\sbRelier[$C_{ext}(p)$]{E0}{c2}
+\sbRelier[$C_{\text{ext}}(p)$]{E0}{c2}
 \sbBloc[1]{b2}{$K'_1$}{c2}
 \sbRelier{c2}{b2}
 \sbBloc[3]{b4}{$T(p)$}{b2}
 \sbRelier[]{b2}{b4}
 \sbSortie[4]{S}{b4}
-\sbRelier[\^{C}$_{ext}(p)$]{b4}{S}
+\sbRelier[\^{C}$_{\text{ext}}(p)$]{b4}{S}
 \sbDecaleNoeudy[4]{S}{v}
 \sbBlocr[4]{b10}{$1+\frac{K'_2\cdot p}{K'_1}$}{v}
 %\sbBlocr[4]{b10}{$1+\frac{K_'2\cdot p}{K'_1}$}{v}
@@ -891,54 +897,54 @@ Ainsi en manipulant le schéma bloc on obtient :
 
 La fonction de transfert en boucle fermée est donnée par : 
 
-\begin{align*}
-H_{BF}(p)=\dfrac{\dfrac{K'_1}{J_{eq}p^2}}{1+\dfrac{K'_1}{J_{eq}p^2}\left(1+\dfrac{K'_2}{K'_1}p\right)}=
-\\
+$
+H_{BF}(p)=\dfrac{\dfrac{K'_1}{J_{eq}p^2}}{1+\dfrac{K'_1}{J_{eq}p^2}\left(1+\dfrac{K'_2}{K'_1}p\right)}$
+
+$=
 \dfrac{K'_1}{J_{eq}\cdot p^2+K'_2\cdot p+K'_1}=\dfrac{1}{1+\dfrac{K'_2}{K'_1}p+\dfrac{J_{eq}}{K'_1}p^2}
-\end{align*}
+$
 
 
-\end{minipage}
-\vline
-\begin{minipage}[t]{0.4\textwidth}
+%\end{minipage}
+%\vline
+%\begin{minipage}[t]{0.4\textwidth}
 \textbf{Méthode B :}
 
 Ainsi en manipulant le schéma bloc on obtient : 
 
 \begin{center}
-\begin{large}
+%\begin{large}
 \begin{tikzpicture}
 \sbEntree{E0}
 \sbComp[4]{c2}{E0}
-\sbRelier[$C_{ext}(p)$]{E0}{c2}
+\sbRelier[$C_{\text{ext}}(p)$]{E0}{c2}
 \sbBloc[1]{b2}{$K'_1+K'_2\cdot p$}{c2}
 \sbRelier{c2}{b2}
 \sbBloc[3]{b4}{$T(p)$}{b2}
 \sbRelier[]{b2}{b4}
 \sbSortie[4]{S}{b4}
-\sbRelier[\^{C}$_{ext}(p)$]{b4}{S}
+\sbRelier[\^{C}$_{\text{ext}}(p)$]{b4}{S}
 \sbDecaleNoeudy[4]{S}{v}
 \sbBlocr[4]{b10}{$1$}{v}
 %\sbBlocr[4]{b10}{$1+\frac{K_'2\cdot p}{K'_1}$}{v}
 \sbRelieryx{b4-S}{b10}
 \sbRelierxy[]{b10}{c2}
 \end{tikzpicture}
-\end{large}
+%\end{large}
 \end{center}
 
 La fonction de transfert en boucle fermée est donnée par : 
 
-\begin{align*}
-H_{BF}(p)=\dfrac{\dfrac{K'_1+K'_2\cdot p}{J_{eq}p^2}}{1+\dfrac{K'_1+K'_2\cdot p}{J_{eq}p^2}}=
-\dfrac{K'_1+K'_2\cdot p}{J_{eq}\cdot p^2+K'_2\cdot p+K'_1}=\dfrac{1+\dfrac{K'_2}{K'_1}p}{1+\dfrac{K'_2}{K'_1}p+\dfrac{J_{eq}}{K'_1}p^2}
-\end{align*}
+$
+H_{BF}(p)=\dfrac{\dfrac{K'_1+K'_2\cdot p}{J_{eq}p^2}}{1+\dfrac{K'_1+K'_2\cdot p}{J_{eq}p^2}}$
+$ =\dfrac{K'_1+K'_2\cdot p}{J_{eq}\cdot p^2+K'_2\cdot p+K'_1}$
+$=\dfrac{1+\dfrac{K'_2}{K'_1}p}{1+\dfrac{K'_2}{K'_1}p+\dfrac{J_{eq}}{K'_1}p^2}$.
 
-
-\end{minipage}
-
+%\end{minipage}
+\end{multicols}
 Par identification, pour les deux méthodes et avec ce qu'impose la cahier des charges.
 
-\begin{align*}
+$
 \left\{
 \begin{array}{c}
 \omega'_0=\sqrt{\dfrac{K'_1}{J_{eq}}}=5\omega_0\\
@@ -946,11 +952,9 @@ Par identification, pour les deux méthodes et avec ce qu'impose la cahier des c
 \xi=\dfrac{\omega'_0}{2}\dfrac{K'_2}{K'_1}=\dfrac{1}{2}\sqrt{\dfrac{K'_1}{J_{eq}}}\dfrac{K'_2}{K'_1}=1
 \end{array}
 \right.
-\end{align*}
-
+$. 
 On obtient alors,
-
-\begin{align*}
+$
 \left\{
 \begin{array}{c}
 K'_1=25\cdot J_{eq}\cdot \omega_0^2\\
@@ -958,65 +962,47 @@ K'_1=25\cdot J_{eq}\cdot \omega_0^2\\
 K'_2=2\sqrt{K'_1\cdot J_{eq}}=10\cdot J_{eq}\cdot \omega_0
 \end{array}
 \right.
-\end{align*}
+$.
 
 \textbf{La fonction de transfert en boucle ouverte est de classe 2 ainsi l'erreur statique est nulle. }
 
 \subparagraph{}%29
 
-Notons $H_{28}(p)$ la fonction de transfert déterminée à la question 28 : 
+Notons $H_{28}(p)$ la fonction de transfert déterminée à la question 28 :  $
+H_{28}(p)=\dfrac{\text{\^{C}}_{\text{ext}}(p)}{C_{\text{ext}}(p)}=\dfrac{K(p)\cdot T(p)}{1+K(p)\cdot T(p)}$.
 
-\begin{align*}
-H_{28}(p)=\dfrac{\text{\^{C}}_{ext}(p)}{C_{ext}(p)}=\dfrac{K(p)\cdot T(p)}{1+K(p)\cdot T(p)}
-\end{align*}
-
-Avec $Q^*_j(p)=0$.
-
-\begin{align*}
-C_j(p)=\text{\~{C}}_j(p)-\text{\^{C}}_{ext}(p)=-\left(K_1+K_2\cdot p\right)Q_j(p)-H_{28}(p)C_{ext}(p)\\
-\end{align*}
+Avec $Q^*_j(p)=0$, $
+C_j(p)=\text{\~{C}}_j(p)-\text{\^{C}}_{ext}(p)=-\left(K_1+K_2\cdot p\right)Q_j(p)-H_{28}(p)C_{\text{ext}}(p)\\
+$.
 
 D'après la lecture du schéma bloc : 
 
-\begin{align*}
-Q_j(p)=T(p)\left(C_j(p)+C_{ext}(p)\right)=T(p)\left(-\left(K_1+K_2\cdot p\right)Q_j(p)+\left(1-H_{28}(p)\right)C_{ext}(p)\right)\\
-\Leftrightarrow\\
-Q_j(p)\left(1+T(p)\left(K_1+K_2\cdot p\right)\right)=C_{ext}(p)T(p)\left(1-H_{28}(p)\right)\\
-\end{align*}
+$Q_j(p)=T(p)\left(C_j(p)+C_{\text{ext}}(p)\right)=T(p)\left(-\left(K_1+K_2\cdot p\right)Q_j(p)+\left(1-H_{28}(p)\right)C_{\text{ext}}(p)\right) $
+$ \Leftrightarrow 
+Q_j(p)\left(1+T(p)\left(K_1+K_2\cdot p\right)\right)=C_{\text{ext}}(p)T(p)\left(1-H_{28}(p)\right)$.
 
-On trouve donc : 
-
-\begin{align*}
-\dfrac{Q_j(p)}{C_{ext}(p)}=\dfrac{T(p)}{\left(1+K(p)\cdot T(p)\right)\left(1+T(p)\left(K_1+K_2\cdot p\right)\right)}
-\end{align*}
+On trouve donc : $
+\dfrac{Q_j(p)}{C_{\text{ext}}(p)}=\dfrac{T(p)}{\left(1+K(p)\cdot T(p)\right)\left(1+T(p)\left(K_1+K_2\cdot p\right)\right)}
+$.
 
 Avec $K(p)=K'_1+K'_2\cdot p$ et $T(p)=\dfrac{1}{J_{eq}p^2}$,
-
-
-\begin{align*}
-\dfrac{Q_j(p)}{C_{ext}(p)}=\dfrac{J_{eq}p^2}{\left(J_{eq}p^2+K'_1+K'_2\cdot p\right)\left(J_{eq}p^2+K_1+K_2\cdot p\right)}
-\end{align*}
+$
+\dfrac{Q_j(p)}{C_{\text{ext}}(p)}=\dfrac{J_{eq}p^2}{\left(J_{eq}p^2+K'_1+K'_2\cdot p\right)\left(J_{eq}p^2+K_1+K_2\cdot p\right)}
+$.
 
 D'après les questions 24 et 27,
-
-\begin{align*}
-\dfrac{Q_j(p)}{C_{ext}(p)}=\dfrac{\dfrac{p^2}{J_{eq}}}{\left(p+\omega'_0\right)^2\left(p+\omega_0\right)^2}
-\end{align*}
-
+$
+\dfrac{Q_j(p)}{C_{\text{ext}}(p)}=\dfrac{\dfrac{p^2}{J_{eq}}}{\left(p+\omega'_0\right)^2\left(p+\omega_0\right)^2}
+$.
 
 
 
 \begin{itemize}
-\item \textbf{Stabilité : } On remarque que les pôles de la FTBF sont à partie réelles strictement négatives ($-\omega_0$ et $-\omega'_0$) ce qui \textbf{est une condition nécessaire et suffisante de stabilité.}
-\item \textbf{Précision : }
-
-Soit $\varepsilon(p)=-Q_j(p)=-\dfrac{\dfrac{p^2}{J_{eq}}}{\left(p+\omega'_0\right)^2\left(p+\omega_0\right)^2}C_{ext}(p)$. En considérant $c_{ext}$ comme une constante, $C_{ext}(p)=\dfrac{C_0}{p}$.
-
+\item \textbf{Stabilité : } on remarque que les pôles de la FTBF sont à partie réelles strictement négatives ($-\omega_0$ et $-\omega'_0$) ce qui \textbf{est une condition nécessaire et suffisante de stabilité.}
+\item \textbf{Précision : } soit $\varepsilon(p)$ $=-Q_j(p)$ $=-\dfrac{\dfrac{p^2}{J_{eq}}}{\left(p+\omega'_0\right)^2\left(p+\omega_0\right)^2}C_{\text{ext}}(p)$. En considérant $C_{\text{ext}}$ comme une constante, $C_{\text{ext}}(p)=\dfrac{C_0}{p}$. 
 L'erreur statique vis-à-vis d'une perturbation constante est donnée par :
-
-\begin{align*}
-\varepsilon_s= \lim_{p\rightarrow0} p\varepsilon(p)= \lim_{p\rightarrow0}\left[-\dfrac{\dfrac{C_0\cdot p^2}{J_{eq}}}{\left(p+\omega'_0\right)^2\left(p+\omega_0\right)^2}\right]=0
-\end{align*} 
+$\varepsilon_s= \lim_{p\rightarrow0} p\varepsilon(p)$ $= \lim_{p\rightarrow0}\left[-\dfrac{\dfrac{C_0\cdot p^2}{J_{eq}}}{\left(p+\omega'_0\right)^2\left(p+\omega_0\right)^2}\right]=0
+$.
 
 \textbf{L'erreur statique vis-à-vis d'une perturbation constante est bien nulle.}
 \end{itemize}
@@ -1035,7 +1021,7 @@ envisagée sous la forme d’une anticipation sur la consigne pour améliorer le
 
 \subparagraph{}\textit{}%30
 
-\textbf{Pour Emilien}
+\textbf{Pour Émilien}
 Pour un signal périodique en entrée d'amplitude $B$, l'écart sera un signal périodique d'amplitude $0,066\cdot B\cdot \omega_i$, avec $i=\left\{1,2\right\}$ et $\omega_i=2\pi f_i$ ($f_1=0,24Hz$ et $f_2=0,48Hz$).
 On note $\varepsilon_0$ l'amplitude de l'écart en régime permanent.
 
@@ -1076,24 +1062,21 @@ $C_j(p)= - K_2 p C_j(p) T(p) + C_a(p) $ et donc $C_j(p)=\dfrac{1}{1+K_2p T(p)}C_
 
 \begin{itemize}
 \item \textbf{Expression temporelle du couple idéal $c_j(t)$ : }
-D'après le schéma bloc dans le domaine de Laplace : $C_j(p)=\dfrac{Q_j(p)}{T(p)}=J_{eq}p^2Q_j(p)$, en repassant dans le domaine temporel : 
-
-\begin{align*}
-c_j(t)=J_{eq}\dfrac{d^2q_j(t)}{dt^2}=J_{eq}\dfrac{d^2q^*_j(t)}{dt^2}
-\end{align*}
+d'après le schéma bloc dans le domaine de Laplace : $C_j(p)=\dfrac{Q_j(p)}{T(p)}=J_{eq}p^2Q_j(p)$, en repassant dans le domaine temporel : 
+$
+c_j(t)=J_{eq}\dfrac{\dd ^2q_j(t)}{\dd t^2}=J_{eq}\dfrac{\dd ^2q^*_j(t)}{\dd t^2}
+$;
 \item \textbf{Expression temporelle du couple idéal $c_u(t)$ : }
-D'après le schéma bloc dans le domaine de Laplace : $C_u(p)=K_1\cdot (Q^*_j(p)-Q_j(p))-K_2\cdot p\cdot Q_j(p)=-K_2\cdot p\cdot Q^*_j(p)$, en repassant dans le domaine temporel : 
-
-\begin{align*}
-c_u(t)=-K_{2}\dfrac{dq^*_j(t)}{dt}
-\end{align*}
-\item Au niveau du comparateur on lit : $c_a(t)=c_j(t)-c_u(t)$, ainsi $c_a(t)=J_{eq}\dfrac{d^2q^*_j(t)}{dt^2}+K_{2}\dfrac{dq^*_j(t)}{dt}$.
+d'après le schéma bloc dans le domaine de Laplace : $C_u(p)=K_1\cdot (Q^*_j(p)-Q_j(p))-K_2\cdot p\cdot Q_j(p)=-K_2\cdot p\cdot Q^*_j(p)$, en repassant dans le domaine temporel : 
+$
+c_u(t)=-K_{2}\dfrac{\dd q^*_j(t)}{\dd t}$;
+\item au niveau du comparateur on lit : $c_a(t)=c_j(t)-c_u(t)$, ainsi $c_a(t)=J_{eq}\dfrac{\dd ^2q^*_j(t)}{\dd t^2}+K_{2}\dfrac{\dd q^*_j(t)}{\dd t}$.
 \end{itemize}
 \subparagraph{}\textit{}%32
 
 
 \begin{itemize}
-\item \textbf{Détermination de $K_a(p)$ :} on déduit de la question précédente (en supposant les condtions initiales nulles) : $K_a(p)=\dfrac{C_a(p)}{Q^*_j(p)}=J_{eq}\cdot p^2+K_2\cdot p$.
+\item \textbf{Détermination de $K_a(p)$ :} on déduit de la question précédente (en supposant les conditions initiales nulles) : $K_a(p)=\dfrac{C_a(p)}{Q^*_j(p)}=J_{eq}\cdot p^2+K_2\cdot p$.
 \item \textbf{Détermination de $F(p)$ :}
 \end{itemize}
 
@@ -1127,23 +1110,18 @@ $\Leftrightarrow Q_j(p)\left(1     +T(p)K_1     + T(p)K_2 p\right)=
       Q_j^{\star}(p)T(p) \left(  K_a(p)     +K_1 \right)     $
 
 On a donc $F(p)=\dfrac{Q_j(p)}{Q_j^{\star}(p)}=\dfrac{\left(K_a(p) +K_1\right)T(p)}{1+T(p)K_1 + T(p)K_2 p}$.
-
-En factorisant par $T(p)$ au numérateur et au dénominateur puis en remplaçant $T(p)$ par $\dfrac{1}{J_{eq}p^2}$ et $K_a(p)=J_{eq}\cdot p^2+K_2\cdot p$, on obtient,
-
-\begin{align*}
+En factorisant par $T(p)$ au numérateur et au dénominateur puis en remplaçant $T(p)$ par $\dfrac{1}{J_{eq}p^2}$ et $K_a(p)=J_{eq}\cdot p^2+K_2\cdot p$, on obtient $
 F(p)=\dfrac{J_{eq}p^2+K_1+K_2\cdot p}{J_{eq}p^2+K_1+K_2\cdot p}=1
-\end{align*}
+$.
 
-Ainsi quelque soit la forme de l'entrée, $Q^*_j(p)=Q_j(p)$ et donc l'erreur est nulle en particulier vis-à-vis de signaux de consigne sinusoïdaux.
+Ainsi quelle que soit la forme de l'entrée, $Q^*_j(p)=Q_j(p)$ et donc l'erreur est nulle en particulier vis-à-vis de signaux de consigne sinusoïdaux.
 
 \subparagraph{}\textit{}%33
 
-En reprenant le résultat de la question 31 qui permet d'exprimer $c_a(t)$ dans le domaine temporel, on obtient,
-
-\begin{align*}
-c_a(t)=J_{eq}\dfrac{d^2\delta q^*_j(t)}{dt^2}+K_{2}\dfrac{d\delta q^*_j(t)}{dt}
-=-J_{eq}\omega_1^2B_1\sin\left(\omega_1t+\theta_1\right)+K_2\omega_2B_2\cos\left(\omega_2t+\theta_2\right)
-\end{align*}
+En reprenant le résultat de la question 31 qui permet d'exprimer $c_a(t)$ dans le domaine temporel, on obtient, $
+c_a(t)=J_{eq}\dfrac{\dd ^2\delta q^*_j(t)}{\dd t^2}+K_{2}\dfrac{\dd \delta q^*_j(t)}{\dd t}$
+$=-J_{eq}\omega_1^2B_1\sin\left(\omega_1t+\theta_1\right)+K_2\omega_2B_2\cos\left(\omega_2t+\theta_2\right)
+$.
 
 \subparagraph{}\textit{}%34
 
@@ -1151,7 +1129,7 @@ c_a(t)=J_{eq}\dfrac{d^2\delta q^*_j(t)}{dt^2}+K_{2}\dfrac{d\delta q^*_j(t)}{dt}
 \item Sur la figure 18, on peut juger des performances liées aux exigences 1.2 ("Asservissement au point de fonctionnement") :
 \begin{itemize}
 \item \textbf{Précision :} La précision obtenue est optimale. La position angulaire obtenue est confondu à la consigne en régime permanent ce qui se traduira par un écart en régime permanent inférieur à $10\mu m$.
-\item \textbf{Rapidité : } le temps de réponse à $5\%$ est la durée entre l'instant de l'échelon et l'instant au délà duquel la position est comprise entre $\pm 5\%$ de la valeur finale et qui correspond ici à la durée au delà de laquelle la position est comprise entre $0,57\mu m$ et $0,63\mu m$. Sur la figure 18, on relève approximativement $0,15s<0,2s$ comme l'exige l'exigence 1.2.2.  
+\item \textbf{Rapidité : } le temps de réponse à $5\%$ est la durée entre l'instant de l'échelon et l'instant au delà duquel la position est comprise entre $\pm 5\%$ de la valeur finale et qui correspond ici à la durée au delà de laquelle la position est comprise entre $0,57\mu m$ et $0,63\mu m$. Sur la figure 18, on relève approximativement $0,15s<0,2s$ comme l'exige l'exigence 1.2.2.  
 \end{itemize}
 \item Sur la figure 19, on peut juger des performances liées aux exigences 1.3 ("Suivi des mouvements physiologiques"). 
 \begin{itemize}
