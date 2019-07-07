@@ -265,17 +265,14 @@ Il est peut être souhaitable de préciser avant la question aux candidats qu'on
 %On a donc $|| H\left( i\omega\right)|| \simeq K\omega $ avec $K=\sqrt{4\xi^2\omega_0^2  + 1}$ lorsque $\omega << \omega_0$.
 %
 %\textcolor{red}{A VERIFIER Au final, $\varepsilon_2 \simeq \omega_2 \sqrt{4\xi^2\omega_0^2  + 1} A_2\sin \left(\omega_2 t + \Phi_2 \right) $.}
-
 En considérant de faibles pulsations telles que $\omega\ll \omega_0$, on peut effectuer l'approximation : 
 $\Vert H(i\cdot \omega)\Vert\approx\dfrac{2\xi\omega}{\omega_0}$.
-
 On obtient donc bien : $\Vert H(i\omega)\Vert\approx K\cdot \omega $  avec $K=\dfrac{2\xi}{\omega_0}$.
 
 
-\subparagraph{}	~\\
+\subparagraph{}	
 D'après l'exigence 1.3.3, $\dfrac{\varepsilon_2}{A_2}<10^{-2}$, on obtient alors la relation suivante : $
 \dfrac{\varepsilon_2}{A_2}\approx \dfrac{2\xi\omega_2}{\omega_0}<10^{-2}$.  
-
 Ce qui donne $\omega_0>200\xi\omega_2\approx \SI{603}{rad.s^{-1}}$
 
 L'exigence 1.2 du cahier des charges concernant l'asservissement en position, et donc la fonction de transfert $F(p)$, impose une bande passante (que l'on suppose à $\SI{0}{dB}$), inférieure à $\SI{30}{rad.s^{-1}}$. $F(p)$ est une fonction de transfert du second ordre de gain 1 et la bande passante à $\SI{0}{dB}$ est de l'ordre de $\omega_0\approx \SI{600}{rad.s^{-1}}$. \textbf{Le cahier des charges est donc bien respecté.}
@@ -300,7 +297,9 @@ L'exigence 1.2 du cahier des charges concernant l'asservissement en position, et
 % Piste 1Supposons que $\dfrac{\varepsilon_2}{A_2} < 10^{-2}$ (exigence 1.3.2), on a alors $  \sqrt{4\xi^2\omega_0^2  + 1} \sin \left(\omega_2 t + \Phi_2 \right) < 10^{-2} $ 
 % $\Rightarrow  \sqrt{4\omega_0^2  + 1} \sin \left(\omega_2 t + \Phi_2 \right) < 10^{-2} $.
 
-\textbf{Remarque :} je ne comprends pas bien la formulation de la question : << En considérant $\varepsilon_2$, déterminer (...) >>.
+\begin{remarque}
+La question devrait peut être reformulée car la formation de la question : << En considérant $\varepsilon_2$, déterminer (...) >> manque de clarté. 
+\end{remarque}
 
 
 \section{Analyse géométrique et élaboration du modèle dynamique du robot esclave}
@@ -342,8 +341,8 @@ En conséquences, $\vect{BD}=\vect{BC}+\vect{CD}=l_3\vect{y_3}+\lambda(t)\vect{z
 %\left( l_3,l_3 \theta_{32}, \lambda_0 + \dfrac{p}{2\pi} \theta_{83} +l_4\right)$.
 
 En projetant $\vect{BD}$ dans la base $\base{x_2'}{y_2'}{z_2'}$, on a 
-
  $\vect{BD}=l_3\vect{y_3}+\left( \lambda_0 + \dfrac{p}{2\pi} \theta_{83} \right)\vect{z_3}+l_4\vect{z_3}$
+ 
  $ =l_3\left( \cos \theta_{32} \vect{y_2'} - \sin\theta_{32} \vect{x_2'}  \right)+\left( \lambda_0 + \dfrac{p}{2\pi} \theta_{83} +l_4\right)\vect{z_2'}$.
  
  Avec l'hypothèse que $\theta_{32}$ reste petit, on a  $\vect{BD}=l_3\left(  \vect{y_2'} - \theta_{32} \vect{x_2'}  \right)+\left( \lambda_0 + \dfrac{p}{2\pi} \theta_{83} +l_4\right)\vect{z_2'}$.
@@ -354,10 +353,9 @@ En projetant $\vect{BD}$ dans la base $\base{x_2'}{y_2'}{z_2'}$, on a
 
 \subparagraph{}%13 --
 
-Soit, $s_D=3\sqrt{s_X^2+s_Y^2+s_Z^2}$. Par calcul différentiel :  \textcolor{red}{XP?}
+Soit, $s_D=3\sqrt{s_X^2+s_Y^2+s_Z^2}$. Par calcul différentiel :  
 
-\begin{minipage}{0.5\textwidth}
-\begin{align*}
+$
 \left\{
 \begin{array}{c}
 dx_D=-l_3d\theta_{32}\\
@@ -365,11 +363,9 @@ dy_D=0\\
 dz_D=\dfrac{p}{2\pi}d\theta_{83}
 \end{array}
 \right.
-\end{align*}
-\end{minipage}
-\begin{minipage}{0.5\textwidth}
-
-\begin{align*}
+\quad
+\Rightarrow
+\quad
 \left\{
 \begin{array}{c}
 s_X=\Delta x_D=l_3\Delta \theta_{32}=l_3 s_{\text{capteur}}\\
@@ -377,19 +373,18 @@ s_Y=\Delta y_D=0\\
 s_Z=\Delta z_D=\dfrac{p}{2\pi}\Delta \theta_{83}=\dfrac{p}{2\pi}s_{\text{capteur}}
 \end{array}
 \right.
-\end{align*}
-\end{minipage}
+$.
+
 
 Ainsi,$
 s_D=3\cdot s_{\text{capteur}}\sqrt{l_3^2+\dfrac{p^2}{4\pi^2}}
 $.
-Le cahier des charges impose la relation suivante,
-
+Le cahier des charges impose la relation suivante, 
 $
-s_{\text{capteur}}<\dfrac{75\mu m}{3\sqrt{l_3^2+\dfrac{p^2}{4\pi^2}}}
+s_{\text{capteur}}<\dfrac{\SI{75}{\mu m}}{3\sqrt{l_3^2+\dfrac{p^2}{4\pi^2}}}
 $.
 
-L'application numérique donne pour résolution maximale afin de respecter le cahier des charge :  $s_{\text{capteur}}=2,72\times \SI{e-5}{}$.
+L'application numérique donne pour résolution maximale afin de respecter le cahier des charge :  $s_{\text{capteur}}= \SI{2,72e-5}{\mu m}$.
 
 
 \subsection{Détermination et vérification du modèle dynamique du robot esclave}
@@ -402,8 +397,10 @@ On se place en régime permanent. Le rendement peut s'exprimer par
 $\eta_9 =\dfrac{C_{73}\dot{\theta}_{32}}{C_{m2}\dot{\theta}_{72}}=\dfrac{C_{73}}{C_{m2}}r_9$. 
 On a donc, en régime permanent, $\vect{C_{73}}=C_{73}\vect{z'_2}=C_{m2}\dfrac{\eta_9}{r_9}\vect{z'_2}$.
 
+\begin{remarque}
+Il serait sûrement nécessaire de préciser avant la questions que le résultat attendu est en régime permanent.
+\end{remarque}
 
-\textbf{Remarque :} peut-être aurait-il été souhaitable de préciser que l'on souhaite cette relation en régime permanent ?
 
 
 \subparagraph{}%15 --
@@ -419,7 +416,9 @@ On peut donc valider les valeurs données par le constructeur.
 \includegraphics[width=\textwidth]{images/fig_02}
 \end{center}
 
-\textbf{Remarque :} en ajoutant l'hypothèse en début de partie II.B.1, l'action de 7 sur 3 est modélisée par un couple. Dans ce cas, le résultat attendu est peut-être 1 inconnue entre 7 et 3.
+\begin{remarque}
+En ajoutant l'hypothèse en début de partie II.B.1, l'action de 7 sur 3 est modélisée par un couple. Dans ce cas, le résultat attendu est peut-être 1 inconnue entre 7 et 3.
+\end{remarque}
 %
 %\begin{center}
 %\includegraphics[width=0.8\textwidth]{images/graphe_structure_complet.jpg}
@@ -600,22 +599,22 @@ On fait l'hypothèse ici que l'action de 3 sur 7 ou du réducteur sur 7 est bien
 \begin{itemize}
 \item On réalise le bilan des actions mécaniques extérieures. 
 \begin{itemize}
-\item \textcolor{red}{ XP : La pesanteur crée un moment en $B$ suivant  $\vect{z_0}$ (le schéma est trompeur)}.
-\item Action de la pesanteur sur 3 : 
+\item Action de la pesanteur sur 3 (\textbf{attention, le schéma cinématique de l'énoncé est donné dans une configuration particulière; la pesanteur crée bien un moment en $B$ suivant  $\vect{z_0}$}) :
+
 $\vectm{B}{\text{pes}}{3}\cdot \vect{z_4} $ $ =\left(\vect{BG_3}\wedge \left(-m_3g \vect{z_0}\right) \right)\vect{z_4}$ 
 $ =\left(\left( a_3\vect{y_3} + b_3\vect{z_3}  \right)\wedge \left(-m_3g \vect{z_0}\right)\right)\vect{z_4}$
 $ =\left( a_3\vect{y_4} \wedge \left(-m_3g \vect{z_0}\right)\right)\vect{z_4}$
 $ =\left( \vect{z_4} \wedge a_3\vect{y_4}\right)\cdot  \left(-m_3g \vect{z_0}\right)$
 $ = a_3 m_3g \left( \vect{x_3}\cdot \vect{z_0} \right)$
-$ = a_3 m_3g \left(  \cos\theta_{32} \vect{x_2'} +\sin\theta_{32} \vect{y_2'} \right)\cdot \vect{z_0} $
+$ = a_3 m_3g \left(  \cos\theta_{32} \vect{x_2'} +\sin\theta_{32} \vect{y_2'} \right)\cdot \vect{z_0} $.
 
 On utilise les hypothèses de linéarisation vues précédemment et on a 
 $\vectm{B}{\text{pes}}{3}\cdot \vect{z_4}= a_3 m_3g \vect{x_2'} \cdot \vect{z_0} $ 
 $= a_3 m_3g \vect{x_2} \cdot \vect{z_0} $
 $= a_3 m_3g \left( \cos \theta_{21} \vect{x_1} +\sin \theta_{21} \vect{y_1} \right)\cdot \vect{z_0} $
 $= a_3 m_3g \left( \cos \theta_{21} \vect{x_0} +\sin \theta_{21}  \left( \cos \alpha_1 \vect{y_0} + \sin \alpha_1 \vect{z_0} \right) \right)\cdot \vect{z_0} $
-$= a_3 m_3g \sin \theta_{21}   \sin \alpha_1    $. En faisant l'application numérique, on a donc 
-$\vectm{B}{\text{pes}}{3}\cdot \vect{z_4}= a_3 m_3g  \dfrac{\sqrt{2}}{2} \dfrac{\sqrt{3}}{2}$
+$= a_3 m_3g \sin \theta_{21}   \sin \alpha_1  $. En faisant l'application numérique, on a donc 
+$\vectm{B}{\text{pes}}{3}\cdot \vect{z_4}= a_3 m_3g  \dfrac{\sqrt{2}}{2} \dfrac{\sqrt{3}}{2}$.
 
 \item Action de la pesanteur sur 4 : 
 $\vectm{B}{\text{pes}}{4}\cdot \vect{z_4} $ $ =\left(\vect{BG_4}\wedge \left(-m_4g \vect{z_0}\right) \right)\vect{z_4}$ 
@@ -625,21 +624,17 @@ $ =\left(\left(l_3\vect{y_3} + \lambda(t) \vect{z_3} + b_4\vect{z_4} \right)\wed
 \textbf{Pour Emilien }
 $
 \left(\vect{BG_4}\wedge \left(-m_4g \vect{z_0}\right) \right)\vect{z_{4,3}}
-=\overrightarrow{z}_3\wedge l_3\overrightarrow{y}_3\cdot \left(-m_4\cdot g\cdot \overrightarrow{z}_0\right)=m_4l_3g\overrightarrow{x}_3\cdot \overrightarrow{z}_0
-$
+=\overrightarrow{z_3}\wedge l_3\overrightarrow{y_3}\cdot \left(-m_4\cdot g\cdot \overrightarrow{z_0}\right)=m_4l_3g\overrightarrow{x_3}\cdot \overrightarrow{z_0}
+$.
 
 Or,
-
-$\overrightarrow{x}_3=\cos\theta_{32}\overrightarrow{x}_{2,2'}+\sin\theta_{32}\overrightarrow{y}_{2'}$
-
-avec $\cos\theta_{32}\approx 1$ et $\sin\theta_{32}\approx 0$
+$\overrightarrow{x_3}=\cos\theta_{32}\overrightarrow{x}_{2,2'}+\sin\theta_{32}\overrightarrow{y}_{2'}$
+avec $\cos\theta_{32}\approx 1$ et $\sin\theta_{32}\approx 0$.
 
  Donc, 
- 
- $\overrightarrow{x}_3\cdot \overrightarrow{z}_0=\left(\cos\theta_{21}\overrightarrow{x}_{1,0}+\sin\theta_{21}\overrightarrow{y}_1\right)\cdot \overrightarrow{z}_0=\sin\theta_{21}\sin\alpha_1=\dfrac{\sqrt{6}}{4}$
- On obtient alors,
- 
- $\vectm{B}{\text{pes}}{4}\cdot \vect{z_4} = l_3 m_4g  \dfrac{\sqrt{6}}{4}$.
+ $\overrightarrow{x_3}\cdot \overrightarrow{z}$ 
+ $=\left(\cos\theta_{21}\overrightarrow{x}_{1,0}+\sin\theta_{21}\overrightarrow{y_1}\right)\cdot \overrightarrow{z_0}$  $=\sin\theta_{21}\sin\alpha_1=\dfrac{\sqrt{6}}{4}$.
+ On obtient alors, $\vectm{B}{\text{pes}}{4}\cdot \vect{z_4} = l_3 m_4g  \dfrac{\sqrt{6}}{4}$.
 
 
 
@@ -659,7 +654,9 @@ avec $\cos\theta_{32}\approx 1$ et $\sin\theta_{32}\approx 0$
 $ C_{73} =  \left(J_3+J_4\right) \ddot{\theta}_{32}+\ddot{\theta}_{32}\left( a_3^2 m_3  +l_3^2 m_4  \right) + g  \dfrac{\sqrt{6}}{4} \left( a_3 m_3 + l_3 m_4\right) $.
 \end{itemize}
 
-\textbf{Il semblerait que ce qui est attendu soit d'utiliser ${C_{73}}=C_{m2}\dfrac{\eta_9}{r_9}$, mais cette relation avait été établie en régime permanent ce qui n'est plus le cas. } 
+\begin{remarque}
+Il semblerait que ce qui est attendu soit d'utiliser ${C_{73}}=C_{m2}\dfrac{\eta_9}{r_9}$, mais cette relation avait été établie en régime permanent ce qui n'est plus le cas. Continuons avec cette << hypothèse >>.
+\end{remarque}
 
 
 $ C_{m2}\dfrac{\eta_9}{r_9}=  \left(J_3+J_4  + a_3^2 m_3  +l_3^2 m_4 \right) \ddot{\theta}_{32} + g  \sin \theta_{21}   \sin \alpha_1 \left( a_3 m_3 + l_3 m_4\right) $.
@@ -679,8 +676,10 @@ Par identification, on a donc :
 \item $A  =\dfrac{\eta_9}{r_9}$;
 \item $C_r(t)=-g  \dfrac{\sqrt{6}}{4} \left( a_3 m_3 + l_3 m_4\right) $.
 \end{itemize}
+\begin{remarque}
+$J_{eq}$ dépend aussi de $a_3$ et $m_3$, il faudrait ajouter cette précision dans la liste des constantes contenues dans l'expression.
+\end{remarque}
 
-\textbf{Remarque :  $J_{eq}$ dépendrait aussi de $a_3$ et $m_3$.}
 %
 % \textbf{On isole l'ensemble $\{7\}$.}
 %\begin{itemize}
@@ -703,15 +702,17 @@ Par identification, on a donc :
 \item \textbf{Méthode 1 : }
 D'après l'expression donnée, on a $C_r(t)=J_{eq}\ddot{\theta}_{32}(t)-A C_{m2}(t)$.
 Lorsque la vitesse est constante, on a donc $C_r(t)=-A C_{m2}(t)$ avec $C_{m2}(t)=-\SI{53,25}{Nm}$ et 
-$C_r(t)= \dfrac{0,78}{0,25} \cdot  53,25  = \SI{166,14}{Nm}$.   \textbf{Trop grand.}
+$C_r(t)= \dfrac{0,78}{0,25} \cdot  53,25  = \SI{166,14}{Nm}$.   
 
 
 À accélération constante, $\ddot{\theta}_{32} = \dfrac{0,075}{0,25}=\SI{0,3}{rad.s^{-2}}$. On a donc 
-$J_{eq}=\dfrac{C_r(t)+A C_{m2}(t)}{\ddot{\theta}_{32}(t)}=\dfrac{C_r(t)-A 51,25}{0,3}$ 
-$\dfrac{166,14  -51,25\dfrac{0,78}{0,25}}{0,3}=\SI{20,8}{kg.m^2}$. 
+$J_{eq}=\dfrac{C_r(t)+A C_{m2}(t)}{\ddot{\theta}_{32}(t)}$
+$=\dfrac{C_r(t)-A 51,25}{0,3}$ 
+$=\dfrac{166,14  -51,25\dfrac{0,78}{0,25}}{0,3}$
+$=\SI{20,8}{kg.m^2}$. 
 
 \item \textbf{Méthode 2 : }
-Soit,
+soit,
 \begin{itemize}
 \item $C^{a}_{m2}=C_{m2}(t)\approx-\SI{51,2}{Nm}$ pour $t\in\left[0;0,25\right]$ ;
 \item $C^{b}_{m2}=C_{m2}(t)\approx-\SI{53}{Nm}$ pour $t\in\left[0,25;0,75\right]$ ;
@@ -723,25 +724,21 @@ On obtient alors 3 équations :
 $
 \left\{
 \begin{array}{l}
-J_{eq}\ddot{\theta}_{32a}=A\cdot C^{a}_{m2}+C_r(t) \quad (a)\\
-0=A\cdot C^{b}_{m2}+C_r(t)  \quad (b)\\
--J_{eq}\ddot{\theta}_{32a}=A\cdot C^{c}_{m2}+C_r(t)  \quad (c)\\
+(a) \quad J_{eq}\ddot{\theta}_{32a}=A\cdot C^{a}_{m2}+C_r(t) \\
+(b) \quad 0=A\cdot C^{b}_{m2}+C_r(t)\\
+(c) \quad -J_{eq}\ddot{\theta}_{32a}=A\cdot C^{c}_{m2}+C_r(t)\\
 \end{array}
 \right.
-$
+$.
 
 En combinant les équations : 
 \begin{itemize}
-\item $(b) \rightarrow C_r(t)=-A\cdot  C^{b}_{m2}=-\dfrac{\eta_9}{r_9}C^{b}_{m2}\approx \SI{-165.67}{Nm}$
-\item $(a)-(c)\rightarrow 2 J_{eq} \ddot{\theta}_{32a}=A\cdot \left(C^{a}_{m2}-C^{c}_{m2}\right)$
+\item $(b) \rightarrow C_r(t)=-A\cdot  C^{b}_{m2}=-\dfrac{\eta_9}{r_9}C^{b}_{m2}\approx \SI{-165.67}{Nm}$;
+\item $(a)-(c)\rightarrow 2 J_{eq} \ddot{\theta}_{32a}=A\cdot \left(C^{a}_{m2}-C^{c}_{m2}\right)$.
 \end{itemize}
 
-On obtient alors,
-
-\begin{align*}
-J_{eq}=\dfrac{A\cdot \left(C^{a}_{m2}-C^{c}_{m2}\right)}{2\ddot{\theta}_{32a}} \approx \SI{19,76}{kg}\cdot m^2
-\end{align*}
-
+On obtient alors, $
+J_{eq}=\dfrac{A\cdot \left(C^{a}_{m2}-C^{c}_{m2}\right)}{2\ddot{\theta}_{32a}} \approx \SI{19,76}{kg.m^2}$.
 
 \end{itemize}
 
@@ -752,16 +749,14 @@ J_{eq}=\dfrac{A\cdot \left(C^{a}_{m2}-C^{c}_{m2}\right)}{2\ddot{\theta}_{32a}} \
 \subparagraph{}%23 --
 
 En faisant l'application numérique à partir des données de l'énoncé, on trouve : 
-
-\begin{align*}
+$
 \left\{
 \begin{array}{c}
 J_{\text{eqth}}=\SI{18,1}{kg m^2}\\
-\\
 C_{\text{rth}}=-\SI{85,57}{N m}
 \end{array}
 \right.
-\end{align*}
+$.
 
 Le moment d'inertie équivalent trouvé expérimentalement est supérieur au moment d'inertie théorique avec un écart de l'ordre de $10\%$ probablement du aux hypothèse concernant l'utilisation rendement.
 
@@ -871,7 +866,9 @@ En manipulant le schéma bloc on peut obtenir :
 
 \subparagraph{}%28
 
-\textbf{Remarque : } on peut hésiter entre prendre la structure de la partie III.A (Méthode A) ou donner un $K(p)$ équivalent sous la forme d'un correcteur P.D. (Méthode B).
+\begin{remarque}
+On peut hésiter entre prendre la structure de la partie III.A (Méthode A) ou donner un $K(p)$ équivalent sous la forme d'un correcteur P.D. (Méthode B).
+\end{remarque}
 
 %\begin{minipage}[t]{0.4\textwidth}
 \begin{multicols}{2}
@@ -912,6 +909,10 @@ $
 %\end{minipage}
 %\vline
 %\begin{minipage}[t]{0.4\textwidth}
+
+\vfill\null
+\columnbreak 
+
 \textbf{Méthode B :}
 
 Ainsi en manipulant le schéma bloc on obtient : 
@@ -1024,7 +1025,6 @@ envisagée sous la forme d’une anticipation sur la consigne pour améliorer le
 
 
 \subparagraph{}\textit{}%30
-
 Pour un signal périodique en entrée d'amplitude $B$, l'écart sera un signal périodique d'amplitude $0,066\cdot B\cdot \omega_i$, avec $i=\left\{1,2\right\}$ et $\omega_i=2\pi f_i$ ($f_1=0,24Hz$ et $f_2=0,48Hz$).
 On note $\varepsilon_0$ l'amplitude de l'écart en régime permanent.
 
@@ -1104,7 +1104,6 @@ $.
 Ainsi quelle que soit la forme de l'entrée, $Q^*_j(p)=Q_j(p)$ et donc l'erreur est nulle en particulier vis-à-vis de signaux de consigne sinusoïdaux.
 
 \subparagraph{}\textit{}%33
-
 En reprenant le résultat de la question 31 qui permet d'exprimer $c_a(t)$ dans le domaine temporel, on obtient, $
 c_a(t)=J_{eq}\dfrac{\dd ^2\delta q^*_j(t)}{\dd t^2}+K_{2}\dfrac{\dd \delta q^*_j(t)}{\dd t}$
 $=-J_{eq}\omega_1^2B_1\sin\left(\omega_1t+\theta_1\right)+K_2\omega_2B_2\cos\left(\omega_2t+\theta_2\right)
@@ -1115,14 +1114,14 @@ $.
 
 
 \begin{itemize}
-\item Sur la figure 18, on peut juger des performances liées aux exigences 1.2 ("Asservissement au point de fonctionnement") :
+\item Sur la figure 18, on peut juger des performances liées aux exigences 1.2 (<< Asservissement au point de fonctionnement >>) :
 \begin{itemize}
 \item \textbf{Précision :} La précision obtenue est optimale. La position angulaire obtenue est confondu à la consigne en régime permanent ce qui se traduira par un écart en régime permanent inférieur à $10\mu m$.
-\item \textbf{Rapidité : } le temps de réponse à $5\%$ est la durée entre l'instant de l'échelon et l'instant au delà duquel la position est comprise entre $\pm 5\%$ de la valeur finale et qui correspond ici à la durée au delà de laquelle la position est comprise entre $0,57\mu m$ et $0,63\mu m$. Sur la figure 18, on relève approximativement $0,15s<0,2s$ comme l'exige l'exigence 1.2.2.  
+\item \textbf{Rapidité : } le temps de réponse à $5\%$ est la durée entre l'instant de l'échelon et l'instant au delà duquel la position est comprise entre $\pm 5\%$ de la valeur finale et qui correspond ici à la durée au delà de laquelle la position est comprise entre $\SI{0,57}{\mu m}$ et $\SI{0,63}{\mu m}$. Sur la figure 18, on relève approximativement $\SI{0,15}{s}<\SI{0,2}{s}$ comme l'exige l'exigence 1.2.2.  
 \end{itemize}
-\item Sur la figure 19, on peut juger des performances liées aux exigences 1.3 ("Suivi des mouvements physiologiques"). 
+\item Sur la figure 19, on peut juger des performances liées aux exigences 1.3 (<<~Suivi des mouvements physiologiques~>>). 
 \begin{itemize}
-\item le signal de consigne possède une fréquence d'environ $0,5Hz$ et une amplitude de consigne $0,34rad$. 
+\item le signal de consigne possède une fréquence d'environ $\SI{0,5}{Hz}$ et une amplitude de consigne $\SI{0,34}{rad}$. 
 \item l'erreur relatif est égale en amplitude à environ $\dfrac{75\times 10^{-6}}{0,34}\approx 2,2\times 10^{-4}<10^{-2}$ ce qui est bien conforme au cahier des charges.
 \end{itemize}
 \end{itemize}
