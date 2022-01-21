@@ -76,8 +76,20 @@ Documents de TP\\
 \end{center}
 
 On pose $\vect{AB}=H\vect{y_0}$, $\vect{BC}=R\vect{x_2}$ et
+$\vect{AC}=\lambda(t)\vect{x_1}$. 
+\textbf{Paramètres constants} :
+\begin{itemize}
+\item $R = \SI{81}{mm} $
+\item $H = \SI{112}{mm}$
+\item $\alpha = 45\degres $
+\end{itemize}
 
-$\vect{AC}=\lambda(t)\vect{x_1})$.
+\textbf{Conditions aux limites}
+\begin{itemize}
+\item Barrière fermée : $\theta_{\text{ini}} =-30,61\degres$ 
+\item Barrière ouverte : $\theta_{\text{fin}} =180+35,35 = 215,35\degres$ 
+\end{itemize}
+
 \subsection{Détermination de la loi Entrée / Sortie}
 
 La fermeture de chaîne cinématique s'écrit ainsi : $\vect{AB}+\vect{BC}+\vect{CA}=\vect{0}$ soit $H\vect{y_0}+R\vect{x_2}-\lambda(t)\vect{x_1}=\vect{0}$
@@ -275,8 +287,39 @@ k  = -23
 \right.$
 
 Au final, $C_r (\varphi) =-23\varphi + 23 \dfrac{3\pi}{4}$.
-.
 
+
+\section{Détermination du couple moteur en utilisant le Théorème de l'Energie cinétique}
+
+\subsection{On isole \{1+2+3\}}
+
+\subsection{Bilan des puissances extérieures}
+
+\textbf{Hypothèse : liaisons parfaites}
+
+\begin{itemize}
+\item Puissance exercée par le moteur : $\pext{\text{moteur}}{2}{0} = C_m \dot{\theta}$.
+\item Puissance exercée par le ressort : $\pext{\text{ressort}}{1}{0} = C_r(\varphi) \dot{\varphi}$.
+\item Puissance exercée par la pensanteur : $\pext{\text{pesanteur}}{1}{0} = \torseurl{-Mg\vect{y_0}}{-\mu \vect{x_1'}\wedge Mg\vect{y_0}}{A} \otimes \torseurl{\dot{\varphi}\vect{z_0}}{**}{G_1} = -Mg\mu\cos\left(\varphi -\alpha\right)  \dot{\varphi}$.
+\end{itemize}
+
+
+
+\subsection{Bilan des puissances intérieures}
+
+\textbf{Hypothèse : liaisons parfaites} la puissance interne est donc nulle.
+
+\subsection{Calcul de l'énergie cinétique}
+
+Les pièces 1 et 2 sont respectivement en rotation autour des axes $\left(\vect{A},\vect{z_0}\right)$ et $\left(\vect{B},\vect{z_0}\right)$.
+On néglige l'énergie cinétique du galet.
+
+$\ec{1+2+3}{0}=\dfrac{1}{2}\left(J_{2,B,\vect{z_0}} \dot{\theta}^2+J_{1,A,\vect{z_0}} \dot{\varphi}^2\right)$
+
+\subsection{Théorème de l'énergie cinétique}
+
+$J_{2,B,\vect{z_0}} \dot{\theta}\ddot{\theta}+J_{1,A,\vect{z_0}} \dot{\varphi}\ddot{\varphi}=C_m \dot{\theta}+C_r(\varphi) \dot{\varphi}-Mg\mu\cos\left(\varphi -\alpha\right)  \dot{\varphi}
+$
 
 %180° >> pi 
 %100° >> 100 pi /180
