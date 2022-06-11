@@ -1,0 +1,106 @@
+\documentclass[10pt,fleqn]{article} % Default font size and left-justified equations
+\usepackage[%
+    pdftitle={TP : Étude du Robot Delta 2D},
+    pdfauthor={Xavier Pessoles}]{hyperref}
+
+\input{../../../style/packages}
+\input{../../../style/new_style}
+\input{../../../style/macros_SII}
+\input{../../../style/environment}
+
+\usepackage{amsmath}
+
+
+
+\def\discipline{Sciences \\Industrielles de \\ l'Ingénieur}
+\def\xxtete{Sciences Industrielles de l'Ingénieur}
+
+\def\classe{PTSI -- PT}
+\def\xxnumpartie{Doc. TP}
+\def\xxpartie{Étude des systèmes de laboratoire}
+
+\def\xxnumchapitre{Étude du Robot Delta 2D}
+\def\xxchapitre{\hspace{.12cm} }
+
+\def\xxposongletx{2}
+\def\xxposonglettext{1.45}
+\def\xxposonglety{20}
+\def\xxonglet{Doc. TP}
+
+\def\xxactivite{Doc. TP}
+\def\xxauteur{\textsl{Xavier Pessoles}}
+
+\def\xxcompetences{%
+\textsl{%
+%\textbf{Savoirs et compétences :}
+%\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+%\item Mod-C11 : Modélisation géométrique et cinématique des mouvements entre solides indéformables 
+%\begin{itemize}[label=\ding{112},font=\color{ocre}] 
+%\item Mod-C11.2 : Champ des vecteurs vitesses des points d'un solide
+%\end{itemize}
+%\end{itemize}
+%
+}}
+
+\def\xxfigures{
+\includegraphics[width=.5\textwidth]{images/maxpid_04}
+
+
+}%figues de la page de garde
+\def\xxpied{%
+Étude des systèmes de laboratoire \\
+Robot MaxPID%
+}
+
+%---------------------------------------------------------------------------
+
+
+\begin{document}
+\chapterimage{images/maxpid_01}
+\graphicspath{{../../../style/png/}{images/}}
+\input{../../../style/pagegarde_cours}
+
+%\newpage
+
+%%%%%%%%%%%%%%%%%  FIN DE LA COPIE *****************
+
+
+
+\section{Paramétrage du robot delta}
+
+On a  :
+\begin{itemize}
+\item $\vect{OA} = a\vect{x_0}$ et $\vect{OB} =- a\vect{x_0}$  avec $a =\SI{60}{mm}$;
+\item $\vect{AD} = \ell\vect{x_1}$ et $\vect{BE} = \ell\vect{x_1'}$ avec $\ell =\SI{170}{mm}$;
+\item $\vect{DF} =  L\vect{x_2}$ et $\vect{EF} = L\vect{x_2'}$ avec $L=\SI{350}{mm}$;
+\item $\vect{FP}=-b\vect{x_3}-c\vect{y_3}$ avec $b=-\SI{35}{mm}$ et $c=-\SI{75}{mm}$ 
+(on pourra montrer que $\vect{x_0}=\vect{x_3}$ et $\vect{y_0}=\vect{y_3}$);
+\item $\vect{OF} = x\vect{x_0} +y\vect{y_0} $
+\end{itemize}
+
+\section{Modélisation géométrique du Robot Delta 2D}
+
+Le robot delta est un robot à 2 mobilités. Il sera donc nécessaire d'écrire deux fermetures géométriques. 
+Commençons pas réaliser la fermeture de la chaîne $O - A - D - F - O$. 
+
+On a donc : 
+$\vect{OA}+\vect{AD}+\vect{DF}+\vect{FO} = \vect{0}$, soit 
+$a\vect{x_0}+ \ell\vect{x_1}+L\vect{x_2} -x\vect{x_0} -y\vect{y_0} = \vect{0}$.
+
+On projette ensuite dans $\mathcal{B}_{0}$ :
+$a\vect{x_0}+ \ell \left( \cos\theta \vect{x_0} + \sin\theta \vect{y_0} \right)+L\left( \cos\psi \vect{x_0} + \sin\psi\vect{y_0} \right) -x\vect{x_0} -y\vect{y_0} = \vect{0}$. 
+
+On alors les expressions suivantes :
+$
+\left\{
+\begin{array}{l}
+a+ \ell  \cos\theta +L \cos\psi   -x  = 0 \\
+\ell   \sin\theta +L\sin\psi  -y = 0 \\
+\end{array}
+\right.
+$
+
+
+\end{document}
+
+
