@@ -94,11 +94,79 @@ On alors les expressions suivantes :
 $
 \left\{
 \begin{array}{l}
-a+ \ell  \cos\theta +L \cos\psi   -x  = 0 \\
-\ell   \sin\theta +L\sin\psi  -y = 0 \\
+a+ \ell  \cos\theta +L \cos\psi -x  = 0 \\
+\ell   \sin\theta+L\sin\psi -y = 0 \\
 \end{array}
 \right.
 $
+
+Ainsi pour la partie droite, et la chaîne $O - A - D - F - O$ :
+$
+\left\{
+\begin{array}{l}
+a+ \ell  \cos\theta_d +L \cos\psi_d   -x  = 0 \\
+\ell   \sin\theta_d +L\sin\psi_d  -y = 0 \\
+\end{array}
+\right.
+$.
+
+Pour la partie gauche $O - B- E- F - O$, on aura (avec $\vect{OB}=-a\vect{x_0}$) : 
+$
+\left\{
+\begin{array}{l}
+-a+ \ell  \cos\theta_g +L \cos\psi_g   -x  = 0 \\
+\ell   \sin\theta_g +L\sin\psi_g  -y = 0 \\
+\end{array}
+\right.
+$.
+
+\subsection{Cinématique directe}
+La cinématique directe permet d'établir le positionnement du point $F$ de coordonnées $(x,y)$ en fonction des commandes moteurs $\theta_d$ et $\theta_g$. 
+
+Il est donc nécessaire de supprimer $\psi_d$ et $\psi_g$. On a donc
+$
+\left\{
+\begin{array}{l}
+L \cos\psi   = x  -a- \ell  \cos\theta  \\
+L\sin\psi = y - \ell   \sin\theta \\
+\end{array}
+\right.
+$ 
+en passant les expression au carré et en sommant, 
+ $L^2 = \left(x  -a- \ell  \cos\theta \right)^2 + \left( y - \ell   \sin\theta \right)^2$.
+
+On a donc pour chacune des boucles 
+$
+\left\{
+\begin{array}{l}
+L^2 = \left(x  -a- \ell  \cos\theta_d \right)^2 + \left( y - \ell   \sin\theta_d \right)^2 \\
+L^2 = \left(x  +a- \ell  \cos\theta_g \right)^2 + \left( y - \ell   \sin\theta_g \right)^2
+\end{array}
+\right.
+$ 
+
+soit 
+$
+\left\{
+\begin{array}{l}
+L^2 = \left(x^2  +a^2+\ell^2  \cos^2\theta_d  -2xa -2x\ell\cos\theta_d+2al\cos\theta_d  \right) +  y^2 + \ell^2   \sin^2\theta_d- 2y \ell   \sin\theta_d  \\
+L^2 = \left(x^2  +a^2+\ell^2  \cos^2\theta_g  +2xa -2x\ell\cos\theta_g-2al\cos\theta_g \right) +  y^2 + \ell^2   \sin^2\theta_g -2y  \ell   \sin\theta_g 
+\end{array}
+\right.
+$ 
+
+$
+\Rightarrow
+\left\{
+\begin{array}{l}
+L^2 = x^2  +a^2+\ell^2  -2xa -2x\ell\cos\theta_d+2al\cos\theta_d  +  y^2 - 2y \ell   \sin\theta_d  \\
+L^2 = x^2  +a^2+\ell^2 +2xa -2x\ell\cos\theta_g-2al\cos\theta_g  +  y^2  -2y  \ell   \sin\theta_g 
+\end{array}
+\right.
+$ 
+.
+\subsection{Cinématique inverse}
+
 
 
 \end{document}
