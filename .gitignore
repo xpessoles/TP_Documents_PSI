@@ -34,6 +34,5 @@ MoteurCC_3Sigma/SolidWorks/ExempleDoc_MotorShield_1.1_1.zip
 MoteurCC_3Sigma/Simulink/CommandePWM_Mesure/CommandePWM_Mesure_Codeur_Courant_ert_rtw/tmwinternal/tr
 *.eep
 *.hex
-*.ipynb
-*.ipynb
 *.ptc
+RobotDelta2D/Jupyter/.ipynb_checkpoints/CinematiqueDirecte-checkpoint.ipynb
