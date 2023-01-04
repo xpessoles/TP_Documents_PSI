@@ -1,0 +1,146 @@
+\documentclass[10pt]{article}
+\input{style/coursHeadings}
+\input{style/programHeadings}
+\input{style/macros_SII}
+\input{style/macros_Titres}
+\input{style/macros_Frames}
+
+%Si le boolen xp est vrai : compilation pour xabi
+%Sinon compilation Damien
+\newboolean{xp}
+\setboolean{xp}{true}
+
+\newboolean{prof}
+\setboolean{prof}{true}
+
+\usepackage[%
+    pdftitle={Étude complète du Maxpid},
+    pdfauthor={Xavier Pessoles},
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=magenta]{hyperref}
+
+\newif\ifprof
+\proftrue
+%\proffalse
+
+\newif\iftd
+\tdtrue
+%\tdfalse
+
+\def\discipline{Sciences Industrielles de l'Ingénieur}
+\def\xxtitre{\ifthenelse{\boolean{xp}}{
+Étude des systèmes de laboratoire}{
+Chapitre  -- }}
+
+\def\xxsoustitre{\ifthenelse{\boolean{xp}}{
+Bras robotisé Maxpid}{
+Partie  -- }}
+
+\def\xxauteur{\ifthenelse{\boolean{xp}}{
+Xavier \textsc{Pessoles}}{}}
+
+\def\xxpied{\ifthenelse{\boolean{xp}}{
+\textit{Étude des systèmes de laboratoire}\\
+\textit{Barrière Sympact}}{
+\xxtitre}}
+
+\def\xxcathegorie{\ifthenelse{\boolean{xp}}{
+2020 -- 2021 \\
+Xavier \textsc{Pessoles}}{
+Informatique - Cours}}
+
+
+
+
+
+%---------------------------------------------------------------------------
+
+
+\begin{document}
+
+\ifthenelse{\boolean{xp}}{\input{style/enteteXP}}{\input{style/enteteDI}}
+
+\begin{minipage}[b]{.3\linewidth}
+\begin{center}
+%\includegraphics[width=.95\linewidth]{images/capsuleuse_ph}
+
+\textit{Système pédagogique}
+\end{center}
+\end{minipage} \hfill
+\begin{minipage}[b]{.3\linewidth}
+\begin{center}
+%\includegraphics[width=.95\linewidth]{images/capsuleuse_3d}
+
+\textit{Représentation 3D du système}
+\end{center}
+\end{minipage} \hfill
+\begin{minipage}[b]{.3\linewidth}
+\begin{center}
+%\includegraphics[width=.75\linewidth]{images/CroixMalte_3d}
+
+%\textit{Représentation 3D de la Croix de Malte}
+\end{center}
+\end{minipage}
+
+
+
+\setlength{\parskip}{0ex plus 0.2ex minus 0ex}
+ \renewcommand{\contentsname}{}
+ \renewcommand{\baselinestretch}{1}
+
+\tableofcontents
+
+ \renewcommand{\baselinestretch}{1.2}
+\setlength{\parskip}{2ex plus 0.5ex minus 0.2ex}
+
+
+
+\section{Modélisation cinématique de la barrière Sympact}
+\subsection{Schéma cinématique}
+
+
+\begin{center}
+ \includegraphics[width=.95\textwidth]{images/fig_01}
+\end{center}
+
+\subsection{Détermination de la loi Entrée / Sortie}
+
+La fermeture de chaîne cinématique s'écrit ainsi : 
+
+
+Projetons cette relation dans le repère $\mathcal{R}_{0}$ :
+
+
+Pour exprimer la loi entrée sortie, commençons par déterminer $\theta'$ en fonction de $\lambda$ : 
+
+
+
+
+
+\subsection{Détermination de la loi en vitesse}
+%-u'\rsqcine(1-u²)
+
+
+
+\subsection{Tracé des courbes} 
+Application numérique : 
+%\begin{itemize}
+%\item $a = 106,3\; \text{mm}$;
+%\item $b = 59 \; \text{mm}$;
+%\item $c = 70 \; \text{mm}$;
+%\item $d = 80 \; \text{mm}$.
+%\end{itemize}
+
+%\begin{center}
+%\includegraphics[width=.45\textwidth]{images/LoiTheorique}
+%
+%\textit{Loi Entrée Sortie -- Position angulaire du bras en fonction de la position du moteur} 
+%\end{center}
+
+\begin{thebibliography}{2}
+\bibitem{xx}{xx}
+\end{thebibliography}
+\end{document}
+
+
