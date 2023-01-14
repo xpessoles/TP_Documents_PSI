@@ -104,7 +104,7 @@ $$
 \end{array}
 \right.
 $$
-\subsubsection{Expression de $\lambda$ en fonction de $\theta$}
+\subsubsection{Expression de $\theta$ en fonction de $\lambda$}
 Pour exprimer la loi entrée sortie, commençons par déterminer $\theta'$ en fonction de $\lambda$ : 
 $$
 \lambda^2 
@@ -128,6 +128,19 @@ Au final,
 $$
 \theta = \arccos \left(\dfrac{\left( \sqrt{d^2 + (c+b)^2} + p \dfrac{\gamma}{2\pi}\right)^2 - a^2 - b^2 }{2ab} \right) - \arctan\left( \dfrac{d}{c}\right)
 $$
+
+\subsubsection{Expression de $\lambda$ puis $\gamma$ en fonction de $\theta$}
+On a vu que  $\lambda^2 =  a^2 +b^2 + 2ab\cos\theta' $. 
+Par suite, $\lambda^2 =  a^2 +b^2 + 2ab\cos\theta' $. Or $\theta' = \alpha + \theta$; donc 
+
+$\lambda^2 =  a^2 +b^2 + 2ab\cos\left( \alpha + \theta \right) $.
+
+De plus, $\lambda = \lambda_0 + p \dfrac{\gamma}{2\pi}$; donc 
+$\left(\lambda_0 + p \dfrac{\gamma}{2\pi}\right)^2 =  a^2 +b^2 + 2ab\cos\left( \alpha + \theta \right) $
+$\Rightarrow   p \dfrac{\gamma}{2\pi} =  \sqrt{a^2 +b^2 + 2ab\cos\left( \alpha + \theta \right)} - \lambda_0$.
+
+Au final, 
+$$ \gamma =   \dfrac{2\pi}{p}\left(\sqrt{a^2 +b^2 + 2ab\cos\left( \alpha + \theta \right)} - \lambda_0\right).$$
 
 \subsubsection{Expression de $\beta$ en fonction de $\theta'$}
 $$
