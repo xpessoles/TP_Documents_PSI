@@ -10,7 +10,6 @@ int pwm2;
 
 int cpt = 0;
 
-
 void setup() {
   // Setup du PWM
   pinMode(PWM1, OUTPUT);
@@ -25,6 +24,11 @@ void setup() {
 
 void loop() {
   moteur(0) ;
+  delay(1000);
+  moteur(100);
+  delay(1000);
+  moteur(-100);
+  delay(1000);
   Serial.println(cpt); 
   }
 
