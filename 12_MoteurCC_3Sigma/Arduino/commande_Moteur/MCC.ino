@@ -23,13 +23,27 @@ void setup() {
 }
 
 void loop() {
-  moteur(0) ;
-  delay(1000);
-  moteur(100);
-  delay(1000);
-  moteur(-100);
-  delay(1000);
-  Serial.println(cpt); 
+  for (int t=0; t<500; t++)
+   {
+     Serial.print(cpt);Serial.print(";");Serial.print(cpt);Serial.println();
+     moteur(0);
+     delay(1);
+   }
+
+  for (int t=0; t<500; t++)
+   {
+     Serial.print(cpt);Serial.print(";");Serial.print(cpt);Serial.println();
+     moteur(-100);
+     delay(1);
+   }
+
+  for (int t=0; t<500; t++)
+   {
+     Serial.print(cpt);Serial.print(";");Serial.print(cpt);Serial.println();
+     moteur(-100);
+     delay(1);
+   }
+   
   }
 
 void moteur(float x){
