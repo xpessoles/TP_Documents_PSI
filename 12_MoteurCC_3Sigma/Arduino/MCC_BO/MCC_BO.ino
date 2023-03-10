@@ -8,7 +8,7 @@ float uc;
 int pwm1;
 int pwm2;
 
-int cpt = 0;
+volatile int cpt = 0;
 
 void setup() {
   // Setup du PWM
@@ -17,7 +17,7 @@ void setup() {
   // Setup du codeur
   pinMode(VOIE_A,INPUT); 
   pinMode(VOIE_B,INPUT);  
-  attachInterrupt(digitalPinToInterrupt(VOIE_A),codeur,RISING);
+  attachInterrupt(digitalPinToInterrupt(VOIE_A),codeur,CHANGE);
  // Ouverture du port série
   Serial.begin(9600); 
 }
@@ -25,22 +25,22 @@ void setup() {
 void loop() {
   for (int t=0; t<500; t++)
    {
-     Serial.print(cpt);Serial.print(";");Serial.print(cpt);Serial.println();
+     Serial.print(cpt);Serial.print(",");Serial.print(cpt);Serial.println();
      moteur(0);
      delay(1);
    }
 
   for (int t=0; t<500; t++)
    {
-     Serial.print(cpt);Serial.print(";");Serial.print(cpt);Serial.println();
+     Serial.print(cpt);Serial.print(",");Serial.print(cpt);Serial.println();
      moteur(-100);
      delay(1);
    }
 
   for (int t=0; t<500; t++)
    {
-     Serial.print(cpt);Serial.print(";");Serial.print(cpt);Serial.println();
-     moteur(-100);
+     Serial.print(cpt);Serial.print(",");Serial.print(cpt);Serial.println();
+     moteur(100);
      delay(1);
    }
    
@@ -60,8 +60,9 @@ void moteur(float x){
   }
 
 void codeur(){
+  int a = digitalRead(VOIE_A);
   int b = digitalRead(VOIE_B);
-  if(b > 0){
+  if(a==b){
     cpt++;
   }
   else{
