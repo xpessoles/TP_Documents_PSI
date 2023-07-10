@@ -36,3 +36,5 @@ MoteurCC_3Sigma/Simulink/CommandePWM_Mesure/CommandePWM_Mesure_Codeur_Courant_er
 *.hex
 *.ptc
 *.autosave
+*.SLDPRT
+*.SLDASM
