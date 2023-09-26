@@ -1,9 +1,9 @@
 // A VALIDER
-#define PWM1 9 // ou PIN 9 // 6
-#define PWM2 10 // ou 10  9 //10
+#define PWM1 9; // ou PIN 9 // 6
+#define PWM2 10; // ou 10  9 //10
 
-#define VOIE_A 2 //
-#define VOIE_B 3 //
+#define VOIE_A 2; //
+#define VOIE_B 3, //
 
 float uc;
 int pwm1;
