@@ -6,6 +6,11 @@
 #define VOIE_B 3 //
 
 float uc;
+float angle; // angle reducteur
+float eps;  // écart sortie comparateur
+float um;  // tension commande moteur
+
+
 int pwm1;
 int pwm2;
 
@@ -26,17 +31,14 @@ void setup() {
 
 
 void loop() {
-
-  for (int t=0; t<255; t++)
-   {
-     Serial.print(cpt);Serial.print(",");Serial.print(cpt);Serial.println();
-     moteur(0);
-     //moteur(100);
-     delay(1);
-   }
-
-
-   
+  uc = 90.;
+  angle = (float) cpt;
+  angle = angle *360./48./34.;
+  eps = uc-angle;
+  um = 5*eps;
+  Serial.print(uc);Serial.print(",");Serial.print(angle);Serial.println();
+  moteur(um);
+  
   }
 
 void moteur(float x){

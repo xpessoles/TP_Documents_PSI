@@ -5,7 +5,12 @@
 #define VOIE_A 2 //
 #define VOIE_B 3 //
 
-float uc;
+float uc;    // angle de consigne en degrés
+float angle; // angle reducteur mesuré
+float eps;  // écart sortie comparateur
+float um;  // tension commande moteur (PWM)
+
+
 int pwm1;
 int pwm2;
 
@@ -26,17 +31,14 @@ void setup() {
 
 
 void loop() {
-
-  for (int t=0; t<255; t++)
-   {
-     Serial.print(cpt);Serial.print(",");Serial.print(cpt);Serial.println();
-     moteur(0);
-     //moteur(100);
-     delay(1);
-   }
-
-
-   
+  uc = 90.;
+  angle = (float) cpt;  // conversion de l'angle moteur  mesuré en flottant
+  angle = angle *360./48./34.; // conversion de l'angle moteur en angle en degrés en sortie du réducteur
+  eps = uc-angle; // calcul de l'écart
+  um = eps;     // calcul de la consigne moteur
+  Serial.print(uc);Serial.print(",");Serial.print(angle);Serial.println();
+  moteur(um);
+  
   }
 
 void moteur(float x){

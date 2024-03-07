@@ -6,6 +6,8 @@
 #define VOIE_B 3 //
 
 float uc;
+float angle; // angle reducteur
+
 int pwm1;
 int pwm2;
 
@@ -29,8 +31,10 @@ void loop() {
 
   for (int t=0; t<255; t++)
    {
-     Serial.print(cpt);Serial.print(",");Serial.print(cpt);Serial.println();
-     moteur(0);
+     angle = (float) cpt;
+     angle = angle *360./48./34.;
+     Serial.print(angle);Serial.print(",");Serial.print(angle);Serial.println();
+     moteur(100);
      //moteur(100);
      delay(1);
    }
