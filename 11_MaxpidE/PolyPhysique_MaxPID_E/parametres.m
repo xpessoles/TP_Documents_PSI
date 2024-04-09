@@ -6,7 +6,7 @@ theta_pp = 9;           % [rad/s²]  : accélération angulaire du bras
 
 theta = 90;             % [deg]
 theta = theta * pi/180 ;% [rad]
-retard = 0;
+retard = 0.15;
 t_acc = theta_p / theta_pp ;% (rad/s)*s*s/rad
 t_vcc = theta/theta_p - t_acc;
 t0 = retard;
@@ -32,7 +32,7 @@ Umax = 24   ;       % [V]       : Tension max
 Imax = 4.3  ;        % [A]       : Courant max A VERIFIER
 Kc   = 52.5e-3;     % [Nm/A]    : Constante de couple
 Ke   = 1/(182*2*pi/60); % [rad/s/V] : Constante de vitesse
-Jm   = 69.6e-3*1e-4;% [kg.m²]   : Inertie
+Jm   = 69.6e-3*1e-4;% [kg.m]   : Inertie
 Rm   = 2.07;        % [Ohm]     : Résistance moteur
 Lm   = 0.62e-3;     % [H]       : Inductance moteur
 
@@ -42,7 +42,7 @@ Lv = 0.3;           % [m] : longueur de la vis, à définir
 Jv = 10.8*Lv*1e-6;  % [kg.m²] : inertie de la vis
 
 % Transmission
-K_meca = 0.01;      % gain de la transmission (linéarisation)
+K_meca = 1/110;      % gain de la transmission (linéarisation)
 f = 0;              % frottement fluide ramenés à l'arbre moteur 
 K_codeur = 23;
 
@@ -50,3 +50,6 @@ K_codeur = 23;
 % 350mA : courant à partir duquel le MaxPID bouge (essai BO)
 Cfs= 0.350*Kc;
 
+Cfs = 0.02;
+f = 3.7e-5;
+f=0;
