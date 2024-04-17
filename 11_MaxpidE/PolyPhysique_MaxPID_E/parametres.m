@@ -30,11 +30,13 @@ KD_p = 15000 ;      % Action dérivée
 % Paramètres du moteur
 Umax = 24   ;       % [V]       : Tension max
 Imax = 4.3  ;        % [A]       : Courant max A VERIFIER
-Kc   = 52.5e-3;     % [Nm/A]    : Constante de couple
-Ke   = 1/(182*2*pi/60); % [rad/s/V] : Constante de vitesse
-Jm   = 69.6e-3*1e-4;% [kg.m]   : Inertie
-Rm   = 2.07;        % [Ohm]     : Résistance moteur
-Lm   = 0.62e-3;     % [H]       : Inductance moteur
+Kc   = 29.2e-3;     % [Nm/A]    : Constante de couple
+Ke   = 328; 		% [rpm/V] : Constante de vitesse
+Ke   = 328*2*pi/60; 		% [(rad/s)/V] : Constante de vitesse
+Ke   = 1/Ke; 		% [V/(rad/s)] : Constante de vitesse
+Jm   = 79e-3*1e-4;	% [kg.m2]   : Inertie
+Rm   = 0.582;        % [Ohm]     : Résistance moteur
+Lm   = 0.191e-3;     % [H]       : Inductance moteur
 
 % Paramètres de la vis
 pv = 4e-3;          % [m] : pas de la vis
