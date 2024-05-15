@@ -1,4 +1,4 @@
-% Paramètres Moteur
+% Paramètres Moteur Boule
 Rb = 1.53       ; % Ohm
 Lb = 0.186e-3   ; % mH
 Jb = 14.7/1000/10000 ; % kg.m²
@@ -8,6 +8,11 @@ rb = 1/92.7     ; % Réducteur
 
 Cb = 2048       ; % Codeur Boule tops/tour
 Jcb = 0.7/1000/10000 ; % kg.m² inertie codeur boule
+
+% Corecteur Boucle courant
+KiP = 570;  % Correcteur proportionnel de la boucle de courant
+KiI = 205;  % Correcteur intégral de la boucle de courant
+
 
 Ro = 19.2       ;
 Lo = 0.581e-3   ;
