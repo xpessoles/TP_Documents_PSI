@@ -26,3 +26,8 @@ Jro = 0.108/1000/10000 ;
 
 Co = 1024  ; % Codeur Axe optique tops/tour
 Jco = 0.05/1000/10000 ;
+
+
+KPEPOS_pos = 24.25;
+KIEPOS_pos = 0;
+KDEPOS_pos = 182;
