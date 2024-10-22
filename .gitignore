@@ -39,3 +39,4 @@ MoteurCC_3Sigma/Simulink/CommandePWM_Mesure/CommandePWM_Mesure_TEST_ert_rtw
 *.SLDASM
 *.STEP
 ~$Figures \[Enregistrement automatique\].pptx
+*.asv
