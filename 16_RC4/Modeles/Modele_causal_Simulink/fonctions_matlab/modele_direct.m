@@ -2,10 +2,6 @@ function  F = modele_direct(x,var)
 L_HD = var(1);
 L_HG = var(2);
 L_BD = var(3);
-% 
-% L_HD = 989.3068;
-% L_HG = 781.2821;
-% L_BD = 646.1061;
 
 
 X_M = x(1);
