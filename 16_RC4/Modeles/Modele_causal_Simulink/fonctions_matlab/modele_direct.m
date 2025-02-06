@@ -27,7 +27,7 @@ F(2) = Y_HD + R_P * cos(phi_hd)-L_HD*sin(phi_hd) - L_M/2 * sin(theta)-H_M/2*cos(
 F(3) = X_HG + R_P * sin(phi_hg)-L_HG*cos(phi_hg) + L_M/2 * cos(theta)+H_M/2*sin(theta) - X_M;
 F(4) = Y_HG - R_P * cos(phi_hg)-L_HG*sin(phi_hg) + L_M/2 * sin(theta)-H_M/2*cos(theta) - Y_M;
 
-F(5) = X_BD - R_P * sin(phi_bd)-L_BD*cos(phi_bd) - L_M/2 * cos(theta)+H_M/2*sin(theta) - X_M;
+F(5) = X_BD + R_P * sin(phi_bd)-L_BD*cos(phi_bd) - L_M/2 * cos(theta)-H_M/2*sin(theta) - X_M;
 F(6) = Y_BD - R_P * cos(phi_bd)-L_BD*sin(phi_bd) - L_M/2 * sin(theta)+H_M/2*cos(theta) - Y_M;
 
 end
