@@ -1,4 +1,4 @@
-function data = lire_csv_rc4(file_csv)
+function ts = lire_csv_rc4(file_csv)
 
 % Ouvrir le fichier CSV
 fid = fopen(file_csv, 'r');
@@ -49,10 +49,32 @@ for k = 1:(NB)
             nombres(i) = str2double(strrep(champ, ',', '.'));
         end
     end
-    data = [data;nombres]
+    data = [data;nombres];
 end
 
 % Fermer le fichier
 fclose(fid);
+
+les_temps = data(:,2)/1000;
+
+positionSetpoint = data(:, 3);
+positionMeasurement = data(:, 4);
+currentSetpoint = data(:, 5);
+currentMeasurement = data(:, 6);
+
+% Crée une série temporelle pour chaque mesure
+tsPositionSetpoint = timeseries(positionSetpoint, les_temps, 'Name', 'Consigne Position');
+tsPositionMeasurement = timeseries(positionMeasurement, les_temps, 'Name', 'Mesure Position');
+tsCurrentSetpoint = timeseries(currentSetpoint, les_temps, 'Name', 'Consigne Courant');
+tsCurrentMeasurement = timeseries(currentMeasurement, les_temps, 'Name', 'Mesure Courant');
+
+
+% Combine les séries temporelles dans une structure
+% ts.PositionSetpoint = tsPositionSetpoint;
+% ts.PositionMeasurement = tsPositionMeasurement;
+% ts.CurrentSetpoint = tsCurrentSetpoint;
+% ts.CurrentMeasurement = tsCurrentMeasurement;
+
+ts = tscollection({tsPositionSetpoint,tsPositionMeasurement,tsCurrentSetpoint,tsCurrentMeasurement},"name","Mesure Enrouleur")
 
 end
