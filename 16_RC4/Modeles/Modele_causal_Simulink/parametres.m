@@ -36,3 +36,5 @@ ISAT = 4;   % Courant de saturation (4A ou 2A).
 %% Paremètres cinématiques
 vmax = 0.5;   %m/s : vitesse du trapèze
 amax = 5;   %m/s² : accélération du trapèze
+
+addpath("fonctions_matlab\")
