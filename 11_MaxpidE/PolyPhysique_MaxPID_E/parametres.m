@@ -46,12 +46,14 @@ Jv = 10.8*Lv*1e-6;  % [kg.m²] : inertie de la vis
 % Transmission
 K_meca = 1/110;      % gain de la transmission (linéarisation)
 f = 0;              % frottement fluide ramenés à l'arbre moteur 
-K_codeur = 23;
+f = 0.0006;
+
+% Codeur Maxpid E : 8192 tops/tour
+K_codeur = 8192/360; % Conversion ° > qc
 
 % Couple de frottement sec
 % 350mA : courant à partir duquel le MaxPID bouge (essai BO)
 Cfs= 0.350*Kc;
-
-Cfs = 0.02;
-f = 3.7e-5;
-f=0;
+Cfs = 0.02; % ??
+Cfs = 0.0328; % Mesure exp sur MaxpidE
+f = 0.0006; % Mesure exp sur MaxpidE
