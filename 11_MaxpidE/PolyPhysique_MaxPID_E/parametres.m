@@ -25,7 +25,7 @@ KI_i = 200 ;        % Correcteur Intégral
 % Paramètre du correcteur de position
 KP_p = 5600 ;       % Proportionnel
 KI_p = 4800 ;       % Correcteur Intégral
-KD_p = 15000 ;      % Action dérivée
+KD_p = 25000 ;      % Action dérivée
 
 % Paramètres du moteur
 Umax = 24   ;       % [V]       : Tension max
@@ -45,8 +45,7 @@ Jv = 10.8*Lv*1e-6;  % [kg.m²] : inertie de la vis
 
 % Transmission
 K_meca = 1/110;      % gain de la transmission (linéarisation)
-f = 0;              % frottement fluide ramenés à l'arbre moteur 
-f = 0.0006;
+
 
 % Codeur Maxpid E : 8192 tops/tour
 K_codeur = 8192/360; % Conversion ° > qc
@@ -54,6 +53,6 @@ K_codeur = 8192/360; % Conversion ° > qc
 % Couple de frottement sec
 % 350mA : courant à partir duquel le MaxPID bouge (essai BO)
 Cfs= 0.350*Kc;
-Cfs = 0.02; % ??
+
 Cfs = 0.0328; % Mesure exp sur MaxpidE
-f = 0.0006; % Mesure exp sur MaxpidE
+f = 0.0006; % Mesure exp sur MaxpidE frottement fluide ramené à l'arbre moteur
