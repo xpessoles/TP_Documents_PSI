@@ -12,11 +12,11 @@ Jm = Jm+Jr; %%% TO VERIF
 
 Kcm  = 25.6e-3;     % Nm/A    %OK CPM
 Kem  = 1/(373 *2*pi/60); % V/(rad/s)    %OK CPM
-fv = 0;
 
 
-Cfs = 0.0256*0; %% Nm 180/1000*Kcm
-%fv = 2.78e-6; %%% TO VERIF
+
+Cfs = 0.003; %% Nm Réalisé expérimentalement
+fv = 2.e-6 ;%*65;  %%    Réalisé expérimentalement
 
 % Réducteur
 %r = 1/16; %OK CPM
@@ -39,10 +39,10 @@ KPSI = KPos_P*10/1000;
 KISI = KPos_I*78/1000;
 KDSI = KPos_D*80/1000000;
 
-
 %Correcteur Courant
 KCou_P = 1000;
 KCou_I = 1000;
+
 
 % Correcteur vitesse 
 KVit_P = 470;
